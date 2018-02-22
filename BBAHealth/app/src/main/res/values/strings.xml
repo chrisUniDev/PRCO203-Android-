@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BBA Health</string>
+    <string name="title_home">Info</string>
+    <string name="title_maps">Maps</string>
+    <string name="title_record">Record</string>
+    <string name="title_tracker">Tracker</string>
+    <string name="content_description">View In Detail</string>
+</resources>
