@@ -5,4 +5,11 @@
     <string name="title_record">Record</string>
     <string name="title_tracker">Tracker</string>
     <string name="content_description">View In Detail</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="information_fragment">Information Fragment</string>
+    <string name="maps_fragment">Maps Fragment</string>
+    <string name="tracker_fragment">Tracker Fragment</string>
+    <string name="record_fragment">Record Fragment</string>
 </resources>
