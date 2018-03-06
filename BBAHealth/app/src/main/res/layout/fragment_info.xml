@@ -1,24 +1,32 @@
-<FrameLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.bbahealth.InfoFragment">
+    tools:context="com.example.bbahealth.InfoFragment"
+    >
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFFFFF"
-        android:text="Hi User!"
+        android:text="Information"
         android:textSize="25sp"
         android:textAlignment="center"
         android:padding="15dp"
         />
 
     <GridView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/gridview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:ignore="UselessLeaf"
+        android:columnWidth="70dp"
+        android:numColumns="1"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
         />
 
-</FrameLayout>
+</RelativeLayout>

@@ -35,7 +35,6 @@
         app:menu="@menu/navigation"
         />
 
-
     <fragment
         android:id="@+id/fragmentScreen"
         android:layout_width="match_parent"
