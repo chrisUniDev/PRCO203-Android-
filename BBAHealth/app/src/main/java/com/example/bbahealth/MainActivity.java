@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -64,6 +65,24 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         NavBarHelper.disableShiftMode(navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+    }
+
+    public void ViewOldRecordings(View view){
+        setTitle("Old Recordings");
+        RecordingsFragment recordingsFragment = new RecordingsFragment();
+        android.support.v4.app.FragmentTransaction fragmentTransaction3 = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction3.replace(R.id.fragmentScreen, recordingsFragment, "FragName");
+        fragmentTransaction3.commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.fragmentScreen, new RecordFragment()).commit();
+    }
+
+    public void BackToRecord(View view){
+        setTitle("Record");
+        RecordFragment recordFragment = new RecordFragment();
+        android.support.v4.app.FragmentTransaction fragmentTransaction3 = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction3.replace(R.id.fragmentScreen, recordFragment, "FragName");
+        fragmentTransaction3.commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.fragmentScreen, new RecordFragment()).commit();
     }
 
 }

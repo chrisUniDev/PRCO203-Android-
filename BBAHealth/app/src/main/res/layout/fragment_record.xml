@@ -1,4 +1,5 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,6 +9,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFFFFF"
+        android:text="@string/record_your_doctors_session_and_playback_at_any_time"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:paddingTop="10dp"
         />
 
-</FrameLayout>
+    <ImageButton
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/record_session" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/view_old_sessions"
+        android:layout_alignParentBottom="true"
+        android:onClick="ViewOldRecordings"
+        />
+
+</RelativeLayout>
