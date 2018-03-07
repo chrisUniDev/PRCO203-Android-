@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFFFFF"
-        android:text="Ross you need to make this design, its the tracker btws"
+        android:text="@string/ross_you_need_to_make_this_design_its_the_tracker_btws"
         android:textAlignment="center"
         android:textSize="14sp"
         android:paddingTop="10dp"

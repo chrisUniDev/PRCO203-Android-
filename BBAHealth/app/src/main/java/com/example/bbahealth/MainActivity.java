@@ -5,11 +5,8 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-<<<<<<< HEAD
-=======
 import android.view.View;
 import android.widget.TextView;
->>>>>>> a9cab27fff42bc07beacd10470d5104585a26d90
 
 public class MainActivity extends AppCompatActivity {
 
