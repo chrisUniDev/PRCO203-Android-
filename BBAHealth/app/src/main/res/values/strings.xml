@@ -15,5 +15,9 @@
     <string name="view_old_sessions">View old sessions</string>
     <string name="record_session">Record Session</string>
     <string name="back_to_record">Back to record</string>
-    <string name="ross_you_need_to_make_this_design_its_the_tracker_bt_dubs">Ross you need to make this design, its the tracker bt-dubs</string>
+    <string name="ross">Ross you need to make this design, its the tracker bt-dubs</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="click_a_recording_to_play_rename_or_delete">Click a recording to play, rename or delete</string>
 </resources>

@@ -3,32 +3,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.bbahealth.RecordFragment">
+    tools:context="com.example.bbahealth.RecordFragment"
+    >
 
-    <TextView
+    <FrameLayout
+        android:id="@+id/recordFragmentScreen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFFFFF"
-        android:text="@string/record_your_doctors_session_and_playback_at_any_time"
-        android:textAlignment="center"
-        android:textSize="14sp"
-        android:paddingTop="10dp"
+        android:layout_marginBottom="100dp"
         />
 
-    <ImageButton
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:contentDescription="@string/record_session" />
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="55dp"
+        android:layout_alignParentBottom="true"
+        android:text="Back"
+        android:onClick="changeViewNew"
+        tools:ignore="OnClick"
+        />
 
     <Button
-        android:layout_width="match_parent"
+        android:id="@+id/buttonForward"
+        android:layout_width="210dp"
         android:layout_height="50dp"
-        android:text="@string/view_old_sessions"
+        android:layout_marginBottom="55dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="50dp"
-        android:onClick="ViewOldRecordings"
+        android:layout_toRightOf="@+id/buttonBack"
+        android:layout_toEndOf="@+id/buttonBack"
+        android:text="Forward"
+        android:onClick="changeViewOld"
+        tools:ignore="OnClick"
         />
 
 </RelativeLayout>
