@@ -39,17 +39,11 @@ public class ImageAdapter extends BaseAdapter{
     }
 
     private Integer[] ThumbIds = {
-            R.drawable.ic_card_image_one,
-            R.drawable.ic_card_image_two,
-            R.drawable.ic_card_image_three,
-            R.drawable.ic_card_image_one,
-            R.drawable.ic_card_image_two,
-            R.drawable.ic_card_image_three,
-            R.drawable.ic_card_image_one,
-            R.drawable.ic_card_image_two,
-            R.drawable.ic_card_image_three,
-            R.drawable.ic_card_image_one,
-            R.drawable.ic_card_image_two,
-            R.drawable.ic_card_image_three
+            R.drawable.ic_card_image_one_one,
+            R.drawable.ic_card_image_two_one,
+            R.drawable.ic_card_image_three_one,
+            R.drawable.ic_card_image_one_one,
+            R.drawable.ic_card_image_two_one,
+            R.drawable.ic_card_image_three_one
     };
 }
