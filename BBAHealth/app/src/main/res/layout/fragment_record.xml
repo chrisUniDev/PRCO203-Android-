@@ -6,6 +6,13 @@
     tools:context="com.example.bbahealth.RecordFragment"
     >
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:layout_marginTop="500dp"
+        />
+
     <FrameLayout
         android:id="@+id/recordFragmentScreen"
         android:layout_width="match_parent"
@@ -14,26 +21,15 @@
         />
 
     <Button
-        android:id="@+id/buttonBack"
-        android:layout_width="210dp"
+        android:id="@+id/buttonPage"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginBottom="55dp"
         android:layout_alignParentBottom="true"
-        android:text="Back"
-        android:onClick="changeViewNew"
-        tools:ignore="OnClick"
-        />
-
-    <Button
-        android:id="@+id/buttonForward"
-        android:layout_width="210dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="55dp"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/buttonBack"
-        android:layout_toEndOf="@+id/buttonBack"
-        android:text="Forward"
-        android:onClick="changeViewOld"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="Change Page"
+        android:onClick="changeView"
         tools:ignore="OnClick"
         />
 

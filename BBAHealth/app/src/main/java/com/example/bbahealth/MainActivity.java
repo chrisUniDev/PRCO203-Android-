@@ -3,18 +3,14 @@ package com.example.bbahealth;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.AdapterView;
+import android.widget.GridView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
-
-    Button buttonBack, buttonForward;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -43,6 +39,11 @@ public class MainActivity extends AppCompatActivity {
                     fragmentTransaction3.replace(R.id.fragmentScreen, recordFragment, "FragName");
                     fragmentTransaction3.commit();
                     getSupportFragmentManager().beginTransaction().add(R.id.fragmentScreen, new RecordFragment()).commit();
+
+                    NewRecordingFragment newRecordingFragment = new NewRecordingFragment();
+                    android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.recordFragmentScreen, newRecordingFragment, "FragName");
+                    fragmentTransaction.commit();
                     return true;
                 case R.id.navigation_tracker:
                     setTitle("Tracker");
@@ -70,19 +71,47 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView navigation = findViewById(R.id.navigation);
         NavBarHelper.disableShiftMode(navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        GridView gridView = (GridView) findViewById(R.id.gridview);
+        gridView.setAdapter(new ImageAdapter(this));
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(MainActivity.this, "" + i, Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
-    public void changeViewOld(View view){
+    boolean temp = false;
+
+    public void changeView(View view){
+        if(!temp){
+            changeViewOld();
+            temp = true;
+        }else{
+            changeViewNew();
+            temp = false;
+        }
+    }
+
+    public void changeViewOld(){
+        setTitle("Old Recordings");
         OldRecordingFragment oldRecordingFragment = new OldRecordingFragment();
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.recordFragmentScreen, oldRecordingFragment, "FragName");
         fragmentTransaction.commit();
     }
 
-    public void changeViewNew(View view){
+    public void changeViewNew(){
+        setTitle("Record");
         NewRecordingFragment newRecordingFragment = new NewRecordingFragment();
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.recordFragmentScreen, newRecordingFragment, "FragName");
         fragmentTransaction.commit();
+    }
+
+    public void record(View view){
+
     }
 }

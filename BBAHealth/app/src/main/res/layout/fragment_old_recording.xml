@@ -10,9 +10,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFFFFF"
-        android:text="Forward"
+        />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="@string/click_a_recording_to_play_rename_or_delete"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="15sp"
+        android:layout_margin="10dp"
+        />
+
+    <ListView
+        android:id="@+id/listViewPreviousRecordings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textViewTitle"
+        android:dividerHeight="5dp"
+        android:divider="@color/colorAccent"
         />
 
 </RelativeLayout>
