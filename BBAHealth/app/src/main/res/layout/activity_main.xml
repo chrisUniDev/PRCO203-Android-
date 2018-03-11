@@ -40,6 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:name="com.example.bbahealth.InfoFragment"
+        android:layout_marginBottom="55dp"
         />
 
 </RelativeLayout>
