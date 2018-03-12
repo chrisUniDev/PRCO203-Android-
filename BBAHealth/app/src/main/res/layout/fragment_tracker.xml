@@ -3,13 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.bbahealth.TrackerFragment">
+    tools:context="com.example.bbahealth.TrackerFragment"
+    android:background="#ffffff"
+    >
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFFFFF"
-        android:text="@string/ross"
+        android:text="Work In Progress"
         android:textAlignment="center"
         android:textSize="14sp"
         android:paddingTop="10dp"

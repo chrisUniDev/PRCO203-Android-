@@ -20,5 +20,5 @@
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="click_a_recording_to_play_rename_or_delete">Click a recording to play, rename or delete</string>
-    <string name="add_a_note_to_help_remind_you_of_this_meeting">Add a note to help remind you of this meeting</string>
+    <string name="add_a_note_to_help_remind_you_of_this_meeting">Add a keyword to help remind you of this meeting</string>
 </resources>

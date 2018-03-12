@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    setTitle("Information");
+                    setTitle("BBA Health");
                     InfoFragment infoFragment = new InfoFragment();
                     android.support.v4.app.FragmentTransaction fragmentTransaction1 = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction1.replace(R.id.fragmentScreen, infoFragment, "FragName");
