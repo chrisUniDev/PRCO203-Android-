@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.Toast;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,6 +55,14 @@ public class MainActivity extends AppCompatActivity {
                     fragmentTransaction4.commit();
                     getSupportFragmentManager().beginTransaction().add(R.id.fragmentScreen, new TrackerFragment()).commit();
                     return true;
+                case R.id.navigation_support:
+                    setTitle("Support");
+                    TrackerFragment supportFragment = new TrackerFragment();
+                    android.support.v4.app.FragmentTransaction fragmentTransaction5 = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction5.replace(R.id.fragmentScreen, supportFragment, "FragName");
+                    fragmentTransaction5.commit();
+                    getSupportFragmentManager().beginTransaction().add(R.id.fragmentScreen, new TrackerFragment()).commit();
+                    return true;
             }
             return false;
         }
@@ -80,9 +88,18 @@ public class MainActivity extends AppCompatActivity {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(MainActivity.this, "" + i, Toast.LENGTH_LONG).show();
+                openInfoView();
+                //Toast.makeText(MainActivity.this, "" + i, Toast.LENGTH_LONG).show();
             }
         });
+
+        //ImageButton exit= (ImageButton) findViewById(R.id.imageButtonClose);
+        //exit.setOnClickListener(new View.OnClickListener() {
+        //    @Override
+        //    public void onClick(View view) {
+        //       MainActivity.this.finish();
+        //    }
+        //});
     }
 
     boolean temp = false;
@@ -110,6 +127,14 @@ public class MainActivity extends AppCompatActivity {
         NewRecordingFragment newRecordingFragment = new NewRecordingFragment();
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.recordFragmentScreen, newRecordingFragment, "FragName");
+        fragmentTransaction.commit();
+    }
+
+    public void openInfoView(){
+        setTitle("Test");
+        InfoOpenFragment infoOpenFragment = new InfoOpenFragment();
+        android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.fragmentScreen, infoOpenFragment, "FragName");
         fragmentTransaction.commit();
     }
 

@@ -25,4 +25,10 @@
         android:title="@string/title_tracker"
         />
 
+    <item
+        android:id="@+id/navigation_support"
+        android:icon="@drawable/ic_track_changes_black_24dp"
+        android:title="@string/title_support"
+        />
+
 </menu>
