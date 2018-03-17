@@ -57,11 +57,11 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_support:
                     setTitle("Support");
-                    TrackerFragment supportFragment = new TrackerFragment();
+                    SupportFragment supportFragment = new SupportFragment();
                     android.support.v4.app.FragmentTransaction fragmentTransaction5 = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction5.replace(R.id.fragmentScreen, supportFragment, "FragName");
                     fragmentTransaction5.commit();
-                    getSupportFragmentManager().beginTransaction().add(R.id.fragmentScreen, new TrackerFragment()).commit();
+                    getSupportFragmentManager().beginTransaction().add(R.id.fragmentScreen, new SupportFragment()).commit();
                     return true;
             }
             return false;
