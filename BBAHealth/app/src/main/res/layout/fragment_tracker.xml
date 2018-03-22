@@ -18,10 +18,9 @@
         />
 
     <TabHost
-        android:layout_width="200dip"
+        android:layout_width="match_parent"
         android:layout_height="300dip"
-        android:layout_below="@id/textViewTitleText"
-            >
+        android:layout_below="@id/textViewTitleText"          >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,7 +30,9 @@
             <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                />
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
@@ -60,6 +61,14 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab4"
+                    android:background="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>
