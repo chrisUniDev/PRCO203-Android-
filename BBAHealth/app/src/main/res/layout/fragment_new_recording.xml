@@ -43,38 +43,35 @@
 
     <Button
         android:id="@+id/buttonRecord"
-        android:layout_width="150dp"
+        android:layout_width="80dp"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="175dp"
         android:layout_below="@id/textView"
+        android:onClick="record"
+        tools:ignore="OnClick"
         android:text="Record"
         />
 
     <Button
-        android:id="@+id/buttonStopRecord"
-        android:layout_width="150dp"
+        android:id="@+id/buttonPlay"
+        android:layout_width="80dp"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/buttonRecord"
-        android:text="Stop Record"
-        />
-
-    <Button
-        android:id="@+id/buttonPlay"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/buttonStopRecord"
+        android:onClick="record"
+        tools:ignore="OnClick"
         android:text="Play"
         />
 
     <Button
         android:id="@+id/buttonStop"
-        android:layout_width="150dp"
+        android:layout_width="80dp"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/buttonPlay"
+        android:onClick="record"
+        tools:ignore="OnClick"
         android:text="Stop"
         />
 

@@ -1,28 +1,16 @@
 package com.example.bbahealth;
 
 import android.content.pm.PackageManager;
-import android.media.MediaPlayer;
-import android.media.MediaRecorder;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.GridView;
-import android.widget.TextView;
+import android.widget.ImageButton;
 import android.widget.Toast;
-
-import java.io.IOException;
-import java.util.Random;
-
-import static android.Manifest.permission.RECORD_AUDIO;
-import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -59,16 +47,14 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_record:
                     setTitle("Record");
-                    //android.support.v4.app.FragmentTransaction fragmentTransaction3 = getSupportFragmentManager().beginTransaction();
-                    //fragmentTransaction3.replace(R.id.fragmentScreen, recordFragment, "FragName");
-                    //fragmentTransaction3.commit();
-                    //getSupportFragmentManager().beginTransaction().add(R.id.fragmentScreen, new RecordFragment()).commit();
+                    android.support.v4.app.FragmentTransaction fragmentTransaction3 = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction3.replace(R.id.fragmentScreen, recordFragment, "FragName");
+                    fragmentTransaction3.commit();
+                    getSupportFragmentManager().beginTransaction().add(R.id.fragmentScreen, new RecordFragment()).commit();
 
-                    //android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                    //fragmentTransaction.replace(R.id.recordFragmentScreen, newRecordingFragment, "FragName");
-                    //fragmentTransaction.commit();
-
-                    setContentView(R.layout.activity_record);
+                    android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.recordFragmentScreen, newRecordingFragment, "FragName");
+                    fragmentTransaction.commit();
 
                     temp = false;
                     infoViewOpen = false;
@@ -94,15 +80,12 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-
-
-    private boolean isRecording = false;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        InfoFragment infoFragment = new InfoFragment();
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragmentScreen, infoFragment, "FragName");
         fragmentTransaction.commit();
@@ -121,9 +104,19 @@ public class MainActivity extends AppCompatActivity {
                 if(infoViewOpen){
                     openInfoView();
                     Toast.makeText(MainActivity.this, "Card: " + i, Toast.LENGTH_SHORT).show();
+                }else{
+
                 }
             }
         });
+
+        //ImageButton exit= (ImageButton) findViewById(R.id.imageButtonClose);
+        //exit.setOnClickListener(new View.OnClickListener() {
+        //    @Override
+        //    public void onClick(View view) {
+        //       MainActivity.this.finish();
+        //    }
+        //});
     }
 
     public void openInfoView(){
@@ -161,4 +154,12 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
+    protected boolean hasMicrophone(){
+        PackageManager packageManager = this.getPackageManager();
+        return packageManager.hasSystemFeature(PackageManager.FEATURE_MICROPHONE);
+    }
+
+    public void record(View view){
+
+    }
 }
