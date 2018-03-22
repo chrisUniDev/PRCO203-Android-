@@ -4,12 +4,9 @@ import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.os.Environment;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -55,97 +52,6 @@ public class Record extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-
-
-
-
-        recordButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if(checkPermission()) {
-
-                    AudioSavePathInDevice =
-                            Environment.getExternalStorageDirectory().getAbsolutePath() + "/AudioRecording.3gp";
-
-                    MediaRecorderReady();
-
-                    try {
-                        mediaRecorder.prepare();
-                        mediaRecorder.start();
-                    } catch (IllegalStateException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    } catch (IOException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    }
-
-                    recordButton.setEnabled(false);
-                    stopRecordButton.setEnabled(true);
-
-                    Toast.makeText(Record.this, "Recording started",
-                            Toast.LENGTH_LONG).show();
-                } else {
-                    requestPermission();
-                }
-
-            }
-        });
-
-        stopRecordButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mediaRecorder.stop();
-                stopRecordButton.setEnabled(false);
-                playButton.setEnabled(true);
-                recordButton.setEnabled(true);
-                stopButton.setEnabled(false);
-
-                Toast.makeText(Record.this, "Recording Completed",
-                        Toast.LENGTH_LONG).show();
-            }
-        });
-
-        playButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) throws IllegalArgumentException,
-                    SecurityException, IllegalStateException {
-
-                stopRecordButton.setEnabled(false);
-                recordButton.setEnabled(false);
-                stopButton.setEnabled(true);
-
-                mediaPlayer = new MediaPlayer();
-                try {
-                    mediaPlayer.setDataSource(AudioSavePathInDevice);
-                    mediaPlayer.prepare();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-                mediaPlayer.start();
-                Toast.makeText(Record.this, "Recording Playing",
-                        Toast.LENGTH_LONG).show();
-            }
-        });
-
-        stopButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                stopRecordButton.setEnabled(false);
-                recordButton.setEnabled(true);
-                stopButton.setEnabled(false);
-                playButton.setEnabled(true);
-
-                if(mediaPlayer != null){
-                    mediaPlayer.stop();
-                    mediaPlayer.release();
-                    MediaRecorderReady();
-                }
-            }
-        });
-
     }
 
 
@@ -269,5 +175,80 @@ public class Record extends AppCompatActivity {
             // Show 3 total pages.
             return 3;
         }
+    }
+
+    public void startRecording(){
+        if(checkPermission()) {
+
+            AudioSavePathInDevice =
+                    Environment.getExternalStorageDirectory().getAbsolutePath() + "/AudioRecording.3gp";
+
+            MediaRecorderReady();
+
+            try {
+                mediaRecorder.prepare();
+                mediaRecorder.start();
+            } catch (IllegalStateException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+            recordButton.setEnabled(false);
+            stopRecordButton.setEnabled(true);
+
+            Toast.makeText(Record.this, "Recording started",
+                    Toast.LENGTH_LONG).show();
+        } else {
+            requestPermission();
+        }
+
+    }
+
+    public void stopRecording(){
+        mediaRecorder.stop();
+        stopRecordButton.setEnabled(false);
+        playButton.setEnabled(true);
+        recordButton.setEnabled(true);
+        stopButton.setEnabled(false);
+
+        Toast.makeText(Record.this, "Recording Completed",
+                Toast.LENGTH_LONG).show();
+
+    }
+
+    public void playRecording(View view){
+        stopRecordButton.setEnabled(false);
+        recordButton.setEnabled(false);
+        stopButton.setEnabled(true);
+
+        mediaPlayer = new MediaPlayer();
+        try {
+            mediaPlayer.setDataSource(AudioSavePathInDevice);
+            mediaPlayer.prepare();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        mediaPlayer.start();
+        Toast.makeText(Record.this, "Recording Playing",
+                Toast.LENGTH_LONG).show();
+
+    }
+
+    public void stopPlayingRecording(View view){
+        stopRecordButton.setEnabled(false);
+        recordButton.setEnabled(true);
+        stopButton.setEnabled(false);
+        playButton.setEnabled(true);
+
+        if(mediaPlayer != null){
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            MediaRecorderReady();
+        }
+
     }
 }

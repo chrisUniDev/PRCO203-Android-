@@ -53,6 +53,8 @@
         android:layout_marginTop="175dp"
         android:layout_below="@id/textView"
         android:text="Record"
+        android:onClick="startRecording"
+        tools:ignore="OnClick"
         />
 
     <Button
@@ -62,6 +64,8 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/buttonRecord"
         android:text="Stop Record"
+        android:onClick="stopRecording"
+        tools:ignore="OnClick"
         />
 
     <Button
@@ -71,6 +75,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/buttonStopRecord"
         android:text="Play"
+        android:onClick="playRecording"
         />
 
     <Button
@@ -80,6 +85,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/buttonPlay"
         android:text="Stop"
+        android:onClick="stopPlayingRecording"
         />
 
         <android.support.v7.widget.Toolbar
