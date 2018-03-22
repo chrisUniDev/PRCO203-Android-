@@ -22,4 +22,6 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="click_a_recording_to_play_rename_or_delete">Click a recording to play, rename or delete</string>
     <string name="add_a_note_to_help_remind_you_of_this_meeting">Add a keyword to help remind you of this meeting</string>
+    <string name="title_activity_record_test">RecordTestActivity</string>
+    <string name="title_activity_record">Record</string>
 </resources>
