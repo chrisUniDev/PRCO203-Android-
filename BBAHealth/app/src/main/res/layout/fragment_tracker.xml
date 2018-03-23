@@ -4,74 +4,88 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.bbahealth.TrackerFragment"
-    android:background="#ffffff"
-    >
+    android:background="#ffffff"                                >
 
     <TextView
         android:id="@+id/textViewTitleText"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:background="#FFFFFF"
-        android:text="Journey Tracker"
+        android:text="Progress"
         android:textSize="20sp"
         android:paddingTop="10dp"
         android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="100dp"
         android:textColor="@color/colorPrimaryDark"
         />
 
     <TabHost
         android:layout_width="match_parent"
         android:layout_height="300dip"
-        android:layout_below="@id/textViewTitleText"          >
+        android:layout_below="@id/textViewTitleText"            >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"            >
+            android:orientation="vertical"                      >
 
             <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                />
+                android:background="@color/colorPrimary" />
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"            >
 
-                <LinearLayout
-                    android:id="@+id/tab1"
+                <RelativeLayout
+                    android:id="@+id/Stage_1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
+                    
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/colorPrimary"
+                        />
 
-                </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Words" />
 
-                <LinearLayout
-                    android:id="@+id/tab2"
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/Stage_2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"              >
 
-                </LinearLayout>
+                </RelativeLayout>
 
-                <LinearLayout
-                    android:id="@+id/tab3"
+                <RelativeLayout
+                    android:id="@+id/Stage_3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"              >
 
-                </LinearLayout>
+                </RelativeLayout>
 
-                <LinearLayout
-                    android:id="@+id/tab4"
-                    android:background="@color/colorPrimary"
+                <RelativeLayout
+                    android:id="@+id/Stage_4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
-                </LinearLayout>
+                    android:orientation="vertical"              >
+                </RelativeLayout>
             </FrameLayout>
         </LinearLayout>
     </TabHost>
