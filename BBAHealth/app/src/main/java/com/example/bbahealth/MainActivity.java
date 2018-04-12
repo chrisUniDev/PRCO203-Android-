@@ -4,6 +4,11 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
@@ -101,10 +106,10 @@ public class MainActivity extends AppCompatActivity {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                if(infoViewOpen){
+                if (infoViewOpen) {
                     openInfoView();
                     Toast.makeText(MainActivity.this, "Card: " + i, Toast.LENGTH_SHORT).show();
-                }else{
+                } else {
 
                 }
             }
@@ -119,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         //});
     }
 
-    public void openInfoView(){
+    public void openInfoView() {
         setTitle("Test");
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragmentScreen, infoOpenFragment, "FragName");
@@ -130,36 +135,32 @@ public class MainActivity extends AppCompatActivity {
 
     boolean temp = false;
 
-    public void changeView(View view){
-        if(!temp){
+    public void changeView(View view) {
+        if (!temp) {
             changeViewOld();
             temp = true;
-        }else{
+        } else {
             changeViewNew();
             temp = false;
         }
     }
 
-    public void changeViewOld(){
+    public void changeViewOld() {
         setTitle("Old Recordings");
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.recordFragmentScreen, oldRecordingFragment, "FragName");
         fragmentTransaction.commit();
     }
 
-    public void changeViewNew(){
+    public void changeViewNew() {
         setTitle("Record");
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.recordFragmentScreen, newRecordingFragment, "FragName");
         fragmentTransaction.commit();
     }
 
-    protected boolean hasMicrophone(){
+    protected boolean hasMicrophone() {
         PackageManager packageManager = this.getPackageManager();
         return packageManager.hasSystemFeature(PackageManager.FEATURE_MICROPHONE);
-    }
-
-    public void record(View view){
-
     }
 }
