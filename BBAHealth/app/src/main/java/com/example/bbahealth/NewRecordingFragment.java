@@ -51,36 +51,35 @@ public class NewRecordingFragment extends Fragment {
         playButton.setEnabled(false);
         stopButton.setEnabled(false);
 
-
         recordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 //if(checkPermission()) {
 
-                    AudioSavePathInDevice = Environment.getExternalStorageDirectory().getAbsolutePath() + "/AudioRecording.3gp";
+                AudioSavePathInDevice = Environment.getExternalStorageDirectory().getAbsolutePath() + "/AudioRecordings/Recording" + 1 + ".3gp";
 
-                    MediaRecorderReady();
+                MediaRecorderReady();
 
-                    try {
-                        mediaRecorder.prepare();
-                        mediaRecorder.start();
-                    } catch (IllegalStateException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                        Log.d("test","State Issue");
-                    } catch (IOException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                        Log.d("test","IO Issue");
-                    }
+                try {
+                    mediaRecorder.prepare();
+                    mediaRecorder.start();
+                } catch (IllegalStateException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    Log.d("test","State Issue");
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    Log.d("test","IO Issue");
+                }
 
-                    recordButton.setEnabled(false);
-                    stopRecordButton.setEnabled(true);
+                recordButton.setEnabled(false);
+                stopRecordButton.setEnabled(true);
 
-                    Toast.makeText(getActivity().getApplicationContext(), "Started Recording", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity().getApplicationContext(), "Started Recording", Toast.LENGTH_LONG).show();
                 //} else {
-                    //requestPermission();
+                //requestPermission();
                 //}
 
             }
@@ -90,6 +89,8 @@ public class NewRecordingFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 mediaRecorder.stop();
+                mediaRecorder.release();
+                mediaRecorder = null;
 
                 stopRecordButton.setEnabled(false);
                 playButton.setEnabled(true);

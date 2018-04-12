@@ -1,4 +1,4 @@
-<FrameLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,13 +7,83 @@
     android:background="#ffffff"
     >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Work In Progress"
-        android:textAlignment="center"
-        android:textSize="14sp"
-        android:paddingTop="10dp"
+    <ImageButton
+        android:id="@+id/imageButtonNHSOne"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="25dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_card_image_one"
         />
 
-</FrameLayout>
+    <ImageButton
+        android:id="@+id/imageButtonNHSTwo"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageButtonNHSOne"
+        android:src="@drawable/ic_card_image_one"
+        />
+
+    <TextView
+        android:id="@+id/textViewSupportTitle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Other Support"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:paddingTop="15dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/imageButtonNHSTwo"
+        android:background="#D4D4D4"
+        />
+
+    <TextView
+        android:id="@+id/textViewSupportTele"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Beacon Telephone:"
+        android:textSize="15sp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/textViewSupportTitle"
+        />
+
+    <TextView
+        android:id="@+id/textViewSupportEmail"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Beacon Email:"
+        android:textSize="15sp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/textViewSupportTele"
+        />
+
+    <TextView
+        android:id="@+id/textViewTele"
+        android:layout_width="215dp"
+        android:layout_height="50dp"
+        android:text="01823 344202"
+        android:textSize="15sp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/textViewSupportTitle"
+        android:layout_toRightOf="@+id/textViewSupportTele"
+        />
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="215dp"
+        android:layout_height="50dp"
+        android:text="pals@tst.nhs.uk"
+        android:textSize="15sp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/textViewSupportTele"
+        android:layout_toRightOf="@+id/textViewSupportTele"
+        />
+
+</RelativeLayout>

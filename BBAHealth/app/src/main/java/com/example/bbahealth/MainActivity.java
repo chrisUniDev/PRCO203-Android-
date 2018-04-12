@@ -1,20 +1,13 @@
 package com.example.bbahealth;
 
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -40,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
                     android.support.v4.app.FragmentTransaction fragmentTransaction1 = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction1.replace(R.id.fragmentScreen, infoFragment, "FragName");
                     fragmentTransaction1.commit();
-                    recordingState = false;
                     infoViewOpen = true;
                     return true;
                 case R.id.navigation_maps:
@@ -49,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
                     fragmentTransaction2.replace(R.id.fragmentScreen, mapsFragment, "FragName");
                     fragmentTransaction2.commit();
                     getSupportFragmentManager().beginTransaction().add(R.id.fragmentScreen, new MapsFragment()).commit();
-                    recordingState = false;
                     infoViewOpen = false;
                     return true;
                 case R.id.navigation_record:
@@ -63,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
                     fragmentTransaction.replace(R.id.recordFragmentScreen, newRecordingFragment, "FragName");
                     fragmentTransaction.commit();
 
-                    recordingState = false;
                     infoViewOpen = false;
                     return true;
                 case R.id.navigation_tracker:
@@ -72,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
                     fragmentTransaction4.replace(R.id.fragmentScreen, trackerFragment, "FragName");
                     fragmentTransaction4.commit();
                     getSupportFragmentManager().beginTransaction().add(R.id.fragmentScreen, new TrackerFragment()).commit();
-                    recordingState = false;
                     infoViewOpen = false;
                     return true;
                 case R.id.navigation_support:
@@ -81,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
                     fragmentTransaction5.replace(R.id.fragmentScreen, supportFragment, "FragName");
                     fragmentTransaction5.commit();
                     getSupportFragmentManager().beginTransaction().add(R.id.fragmentScreen, new SupportFragment()).commit();
-                    recordingState = false;
                     infoViewOpen = false;
                     return true;
             }
@@ -116,8 +104,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 
     public void openInfoView() {
@@ -127,31 +113,22 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
-    //Recording Area
-
-    boolean recordingState = false;
-
-    public void changeView(View view) {
-        if (!recordingState) {
-            changeViewOld();
-            recordingState = true;
-        } else {
-            changeViewNew();
-            recordingState = false;
-        }
+    public void changeView(View view){
+        changeViewOld();
     }
 
     public void changeViewOld() {
-        setTitle("Old Recordings");
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.recordFragmentScreen, oldRecordingFragment, "FragName");
         fragmentTransaction.commit();
+        Toast.makeText(MainActivity.this, "FUCK", Toast.LENGTH_SHORT).show();
     }
 
     public void changeViewNew() {
-        setTitle("Record");
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.recordFragmentScreen, newRecordingFragment, "FragName");
         fragmentTransaction.commit();
     }
+
+
 }
