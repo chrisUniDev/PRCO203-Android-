@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
                     android.support.v4.app.FragmentTransaction fragmentTransaction1 = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction1.replace(R.id.fragmentScreen, infoFragment, "FragName");
                     fragmentTransaction1.commit();
+                    recordingState = false;
                     infoViewOpen = true;
                     return true;
                 case R.id.navigation_maps:
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                     fragmentTransaction2.replace(R.id.fragmentScreen, mapsFragment, "FragName");
                     fragmentTransaction2.commit();
                     getSupportFragmentManager().beginTransaction().add(R.id.fragmentScreen, new MapsFragment()).commit();
+                    recordingState = false;
                     infoViewOpen = false;
                     return true;
                 case R.id.navigation_record:
@@ -61,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                     fragmentTransaction.replace(R.id.recordFragmentScreen, newRecordingFragment, "FragName");
                     fragmentTransaction.commit();
 
-                    temp = false;
+                    recordingState = false;
                     infoViewOpen = false;
                     return true;
                 case R.id.navigation_tracker:
@@ -70,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
                     fragmentTransaction4.replace(R.id.fragmentScreen, trackerFragment, "FragName");
                     fragmentTransaction4.commit();
                     getSupportFragmentManager().beginTransaction().add(R.id.fragmentScreen, new TrackerFragment()).commit();
+                    recordingState = false;
                     infoViewOpen = false;
                     return true;
                 case R.id.navigation_support:
@@ -78,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                     fragmentTransaction5.replace(R.id.fragmentScreen, supportFragment, "FragName");
                     fragmentTransaction5.commit();
                     getSupportFragmentManager().beginTransaction().add(R.id.fragmentScreen, new SupportFragment()).commit();
+                    recordingState = false;
                     infoViewOpen = false;
                     return true;
             }
@@ -109,23 +113,15 @@ public class MainActivity extends AppCompatActivity {
                 if (infoViewOpen) {
                     openInfoView();
                     Toast.makeText(MainActivity.this, "Card: " + i, Toast.LENGTH_SHORT).show();
-                } else {
-
                 }
             }
         });
 
-        //ImageButton exit= (ImageButton) findViewById(R.id.imageButtonClose);
-        //exit.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-        //    public void onClick(View view) {
-        //       MainActivity.this.finish();
-        //    }
-        //});
+
     }
 
     public void openInfoView() {
-        setTitle("Test");
+        setTitle("Information Open");
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragmentScreen, infoOpenFragment, "FragName");
         fragmentTransaction.commit();
@@ -133,15 +129,15 @@ public class MainActivity extends AppCompatActivity {
 
     //Recording Area
 
-    boolean temp = false;
+    boolean recordingState = false;
 
     public void changeView(View view) {
-        if (!temp) {
+        if (!recordingState) {
             changeViewOld();
-            temp = true;
+            recordingState = true;
         } else {
             changeViewNew();
-            temp = false;
+            recordingState = false;
         }
     }
 
@@ -157,10 +153,5 @@ public class MainActivity extends AppCompatActivity {
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.recordFragmentScreen, newRecordingFragment, "FragName");
         fragmentTransaction.commit();
-    }
-
-    protected boolean hasMicrophone() {
-        PackageManager packageManager = this.getPackageManager();
-        return packageManager.hasSystemFeature(PackageManager.FEATURE_MICROPHONE);
     }
 }
