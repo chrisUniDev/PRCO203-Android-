@@ -1,6 +1,7 @@
 package com.example.bbahealth;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.icu.text.IDNA;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,6 +13,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,12 +24,8 @@ public class MainActivity extends AppCompatActivity {
     RecordFragment recordFragment = new RecordFragment();
     TrackerFragment trackerFragment = new TrackerFragment();
     SupportFragment supportFragment = new SupportFragment();
-    OldRecordingFragment oldRecordingFragment = new OldRecordingFragment();
-    NewRecordingFragment newRecordingFragment = new NewRecordingFragment();
-    InfoOpenFragment infoOpenFragment = new InfoOpenFragment();
 
     public boolean infoViewOpen = false;
-    public SimpleFragmentPagerAdapter adapter;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -54,11 +53,6 @@ public class MainActivity extends AppCompatActivity {
                     fragmentTransaction3.replace(R.id.fragmentScreen, recordFragment, "FragName");
                     fragmentTransaction3.commit();
                     getSupportFragmentManager().beginTransaction().add(R.id.fragmentScreen, new RecordFragment()).commit();
-
-                    android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.recordFragmentScreen, newRecordingFragment, "FragName");
-                    fragmentTransaction.commit();
-
                     infoViewOpen = false;
                     return true;
                 case R.id.navigation_tracker:
@@ -87,16 +81,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        InfoFragment infoFragment = new InfoFragment();
-        android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.fragmentScreen, infoFragment, "FragName");
-        fragmentTransaction.commit();
-        infoViewOpen = true;
-
         BottomNavigationView navigation = findViewById(R.id.navigation);
         NavBarHelper.disableShiftMode(navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
         GridView gridView = findViewById(R.id.gridViewCards);
         gridView.setAdapter(new ImageAdapter(this));
 
@@ -115,23 +102,4 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, InfoOpenActivity.class);
         startActivity(intent);
     }
-
-    public void changeView(View view){
-        changeViewOld();
-    }
-
-    public void changeViewOld() {
-        android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.recordFragmentScreen, oldRecordingFragment, "FragName");
-        fragmentTransaction.commit();
-        Toast.makeText(MainActivity.this, "Test", Toast.LENGTH_SHORT).show();
-    }
-
-    public void changeViewNew() {
-        android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.recordFragmentScreen, newRecordingFragment, "FragName");
-        fragmentTransaction.commit();
-    }
-
-
 }
