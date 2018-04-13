@@ -72,6 +72,8 @@
         android:paddingLeft="10dp"
         android:layout_below="@+id/textViewSupportTitle"
         android:layout_toRightOf="@+id/textViewSupportTele"
+        android:textStyle="bold"
+        android:textColor="#0000ff"
         />
 
     <TextView
@@ -84,6 +86,8 @@
         android:paddingLeft="10dp"
         android:layout_below="@+id/textViewSupportTele"
         android:layout_toRightOf="@+id/textViewSupportTele"
+        android:textStyle="bold"
+        android:textColor="#0000ff"
         />
 
 </RelativeLayout>
