@@ -28,4 +28,9 @@
     <string name="_01823_344202"><u>01823 344202</u></string>
     <string name="pals_tst_nhs_uk"><u>pals@tst.nhs.uk</u></string>
     <string name="info_view_screen_filler">Info View Screen Filler</string>
+    <string name="mri_scan">MRI Scan</string>
+    <string name="results_meeting">Results Meeting</string>
+    <string name="overall_progress">Overall Progress</string>
+    <string name="open_evening">Open Evening</string>
+    <string name="find_out_more_information">Find out more information</string>
 </resources>
