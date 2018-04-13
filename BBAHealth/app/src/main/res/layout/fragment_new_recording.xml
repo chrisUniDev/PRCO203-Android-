@@ -41,23 +41,14 @@
         android:layout_marginTop="10dp"
         />
 
-    <Button
-        android:id="@+id/buttonRecord"
-        android:layout_width="140dp"
-        android:layout_height="40dp"
+    <ImageButton
+        android:id="@+id/imageViewRecordButton"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="175dp"
-        android:layout_below="@id/textView"
-        android:text="Record"
-        />
-
-    <Button
-        android:id="@+id/buttonStopRecord"
-        android:layout_width="140dp"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/buttonRecord"
-        android:text="Stop Record"
+        android:background="@drawable/ic_record_button"
+        android:layout_below="@id/editTextInputNote"
         />
 
     <Button
@@ -65,7 +56,7 @@
         android:layout_width="140dp"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/buttonStopRecord"
+        android:layout_below="@id/imageViewRecordButton"
         android:text="Play"
         />
 

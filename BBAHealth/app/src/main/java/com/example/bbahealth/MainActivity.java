@@ -1,8 +1,12 @@
 package com.example.bbahealth;
 
+import android.content.Intent;
+import android.icu.text.IDNA;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     InfoOpenFragment infoOpenFragment = new InfoOpenFragment();
 
     public boolean infoViewOpen = false;
+    public SimpleFragmentPagerAdapter adapter;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -107,10 +112,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openInfoView() {
-        setTitle("Information Open");
-        android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.fragmentScreen, infoOpenFragment, "FragName");
-        fragmentTransaction.commit();
+        Intent intent = new Intent(this, InfoOpenActivity.class);
+        startActivity(intent);
     }
 
     public void changeView(View view){
@@ -121,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.recordFragmentScreen, oldRecordingFragment, "FragName");
         fragmentTransaction.commit();
-        Toast.makeText(MainActivity.this, "FUCK", Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, "Test", Toast.LENGTH_SHORT).show();
     }
 
     public void changeViewNew() {

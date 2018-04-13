@@ -27,7 +27,7 @@
 
     <item
         android:id="@+id/navigation_support"
-        android:icon="@drawable/ic_track_changes_black_24dp"
+        android:icon="@drawable/ic_people"
         android:title="@string/title_support"
         />
 

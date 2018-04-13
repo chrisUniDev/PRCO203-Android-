@@ -27,4 +27,10 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="tab_text_3">Tab 3</string>
     <string name="title_activity_asdz">AsdzActivity</string>
+    <string name="other_support">Other Support</string>
+    <string name="beacon_telephone">Beacon Telephone:</string>
+    <string name="beacon_email">Beacon Email:</string>
+    <string name="_01823_344202">01823 344202</string>
+    <string name="pals_tst_nhs_uk">pals@tst.nhs.uk</string>
+    <string name="info_view_screen_filler">Info View Screen Filler</string>
 </resources>
