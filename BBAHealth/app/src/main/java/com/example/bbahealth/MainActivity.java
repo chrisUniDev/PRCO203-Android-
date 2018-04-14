@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     TrackerFragment trackerFragment = new TrackerFragment();
     SupportFragment supportFragment = new SupportFragment();
 
-    public boolean infoViewOpen = false;
+    public boolean infoViewOpen = true;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -34,41 +36,27 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     setTitle("BBA Health");
-                    android.support.v4.app.FragmentTransaction fragmentTransaction1 = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction1.replace(R.id.fragmentScreen, infoFragment, "FragName");
-                    fragmentTransaction1.commit();
+                    switchToFragmentInfo();
                     infoViewOpen = true;
                     return true;
                 case R.id.navigation_maps:
                     setTitle("Maps");
-                    android.support.v4.app.FragmentTransaction fragmentTransaction2 = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction2.replace(R.id.fragmentScreen, mapsFragment, "FragName");
-                    fragmentTransaction2.commit();
-                    getSupportFragmentManager().beginTransaction().add(R.id.fragmentScreen, new MapsFragment()).commit();
+                    switchToFragmentMaps();
                     infoViewOpen = false;
                     return true;
                 case R.id.navigation_record:
                     setTitle("Record");
-                    android.support.v4.app.FragmentTransaction fragmentTransaction3 = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction3.replace(R.id.fragmentScreen, recordFragment, "FragName");
-                    fragmentTransaction3.commit();
-                    getSupportFragmentManager().beginTransaction().add(R.id.fragmentScreen, new RecordFragment()).commit();
+                    switchToFragmentRecord();
                     infoViewOpen = false;
                     return true;
                 case R.id.navigation_tracker:
                     setTitle("Tracker");
-                    android.support.v4.app.FragmentTransaction fragmentTransaction4 = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction4.replace(R.id.fragmentScreen, trackerFragment, "FragName");
-                    fragmentTransaction4.commit();
-                    getSupportFragmentManager().beginTransaction().add(R.id.fragmentScreen, new TrackerFragment()).commit();
+                    switchToFragmentTracker();
                     infoViewOpen = false;
                     return true;
                 case R.id.navigation_support:
                     setTitle("Support");
-                    android.support.v4.app.FragmentTransaction fragmentTransaction5 = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction5.replace(R.id.fragmentScreen, supportFragment, "FragName");
-                    fragmentTransaction5.commit();
-                    getSupportFragmentManager().beginTransaction().add(R.id.fragmentScreen, new SupportFragment()).commit();
+                    switchToFragmentSupport();
                     infoViewOpen = false;
                     return true;
             }
@@ -84,8 +72,15 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView navigation = findViewById(R.id.navigation);
         NavBarHelper.disableShiftMode(navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
         GridView gridView = findViewById(R.id.gridViewCards);
+
+        int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 10, getResources().getDisplayMetrics());
+        gridView.setMinimumWidth(px);
+        gridView.setMinimumHeight(10);
+
         gridView.setAdapter(new ImageAdapter(this));
+
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -101,5 +96,30 @@ public class MainActivity extends AppCompatActivity {
     public void openInfoView() {
         Intent intent = new Intent(this, InfoOpenActivity.class);
         startActivity(intent);
+    }
+
+    public void switchToFragmentInfo() {
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction().replace(R.id.fragmentScreen, new InfoFragment()).commit();
+    }
+
+    public void switchToFragmentMaps() {
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction().replace(R.id.fragmentScreen, new MapsFragment()).commit();
+    }
+
+    public void switchToFragmentRecord() {
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction().replace(R.id.fragmentScreen, new RecordFragment()).commit();
+    }
+
+    public void switchToFragmentTracker() {
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction().replace(R.id.fragmentScreen, new TrackerFragment()).commit();
+    }
+
+    public void switchToFragmentSupport() {
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction().replace(R.id.fragmentScreen, new SupportFragment()).commit();
     }
 }

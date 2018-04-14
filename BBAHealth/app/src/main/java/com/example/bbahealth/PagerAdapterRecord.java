@@ -6,10 +6,10 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 import junit.framework.Test;
 
-public class PagerAdapter extends FragmentStatePagerAdapter {
+public class PagerAdapterRecord extends FragmentStatePagerAdapter {
     int mNumOfTabs;
 
-    public PagerAdapter(FragmentManager fm, int NumOfTabs) {
+    public PagerAdapterRecord(FragmentManager fm, int NumOfTabs) {
         super(fm);
         this.mNumOfTabs = NumOfTabs;
     }

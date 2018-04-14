@@ -24,7 +24,7 @@ public class RecordFragment extends Fragment{
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) view.findViewById(R.id.pager);
-        final PagerAdapter adapter = new PagerAdapter(getFragmentManager(), tabLayout.getTabCount());
+        final PagerAdapterRecord adapter = new PagerAdapterRecord(getFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

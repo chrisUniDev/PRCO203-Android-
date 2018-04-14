@@ -79,15 +79,12 @@
                         android:id="@+id/TextViewResultsMeeting"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
                         android:layout_alignLeft="@+id/imageViewFirstBox"
                         android:layout_alignStart="@+id/imageViewFirstBox"
                         android:layout_alignTop="@+id/imageViewFirstBox"
-
                         android:layout_marginTop="16dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginStart="16dp"
-
                         android:textColor="@color/colorPrimaryDark"
                         android:text="@string/results_meeting"
                         />
@@ -96,11 +93,8 @@
                         android:id="@+id/TextViewMRIScan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
                         android:layout_alignLeft="@+id/TextViewResultsMeeting"
-
                         android:layout_alignStart="@+id/TextViewResultsMeeting"
-
                         android:layout_below="@+id/checkBoxResultsMeeting"
                         android:layout_marginTop="17dp"
                         android:text="@string/mri_scan"
@@ -137,11 +131,9 @@
                         android:id="@+id/imageViewSecondBox"
                         android:layout_centerHorizontal="true"
                         android:background="@color/colorPrimary"
-
                         android:layout_width="350dp"
                         android:layout_height="80dp"
                         android:layout_below="@id/imageViewFirstBox"
-
                         android:layout_marginTop="20dp"
                         />
 

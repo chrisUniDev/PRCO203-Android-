@@ -51,22 +51,4 @@
         android:layout_below="@id/editTextInputNote"
         />
 
-    <Button
-        android:id="@+id/buttonPlay"
-        android:layout_width="140dp"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/imageViewRecordButton"
-        android:text="Play"
-        />
-
-    <Button
-        android:id="@+id/buttonStop"
-        android:layout_width="140dp"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/buttonPlay"
-        android:text="Stop"
-        />
-
 </RelativeLayout>

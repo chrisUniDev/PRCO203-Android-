@@ -1,6 +1,7 @@
 package com.example.bbahealth;
 
 import android.content.Context;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -30,9 +31,6 @@ public class ImageAdapter extends BaseAdapter{
     // create a new ImageView for each item referenced by the Adapter
     public View getView(int position, View convertView, ViewGroup parent) {
         ImageView imageView = new ImageView(context);
-
-        imageView.setLayoutParams(new GridView.LayoutParams(1250, 1250));
-        imageView.setPadding(8, 26, 8, 0);
 
         imageView.setImageResource(ThumbIds[position]);
         return imageView;

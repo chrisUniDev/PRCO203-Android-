@@ -27,11 +27,9 @@ import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 public class NewRecordingFragment extends Fragment {
 
     View view;
-    Button playButton, stopButton;
     ImageButton imageRecordButton;
     String AudioSavePathInDevice = null;
     MediaRecorder mediaRecorder;
-    MediaPlayer mediaPlayer;
     public static final int RequestPermissionCode = 1;
     boolean recording = false;
 
@@ -46,13 +44,9 @@ public class NewRecordingFragment extends Fragment {
         //return inflater.inflate(R.layout.fragment_new_recording, container, false);
 
         view = inflater.inflate(R.layout.fragment_new_recording, container, false);
-        // get the reference of Button
-        playButton = (Button) view.findViewById(R.id.buttonPlay);
-        stopButton = (Button) view.findViewById(R.id.buttonStop);
-        imageRecordButton = (ImageButton) view.findViewById(R.id.imageViewRecordButton);
 
-        playButton.setEnabled(false);
-        stopButton.setEnabled(false);
+        // get the reference of Button
+        imageRecordButton = (ImageButton) view.findViewById(R.id.imageViewRecordButton);
 
         imageRecordButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,9 +69,6 @@ public class NewRecordingFragment extends Fragment {
                 mediaRecorder.stop();
                 mediaRecorder.release();
                 mediaRecorder = null;
-
-                playButton.setEnabled(true);
-                stopButton.setEnabled(false);
 
                 //Toast.makeText(getActivity().getApplicationContext(), "Stopped Recording", Toast.LENGTH_LONG).show();
             }
@@ -107,44 +98,6 @@ public class NewRecordingFragment extends Fragment {
                 //} else {
                 //requestPermission();
                 //}
-            }
-        });
-
-        playButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) throws IllegalArgumentException,
-                    SecurityException, IllegalStateException {
-
-                stopButton.setEnabled(true);
-
-                mediaPlayer = new MediaPlayer();
-                try {
-                    mediaPlayer.setDataSource(AudioSavePathInDevice);
-                    mediaPlayer.prepare();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-                mediaPlayer.start();
-
-                Toast.makeText(getActivity().getApplicationContext(), "Playing Recording" ,Toast.LENGTH_LONG).show();
-            }
-        });
-
-        stopButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                stopButton.setEnabled(false);
-                playButton.setEnabled(true);
-
-                if(mediaPlayer != null){
-                    mediaPlayer.stop();
-                    mediaPlayer.release();
-                    MediaRecorderReady();
-                }
-
-
-                Toast.makeText(getActivity().getApplicationContext(), "Paused Recording" ,Toast.LENGTH_LONG).show();
             }
         });
 
