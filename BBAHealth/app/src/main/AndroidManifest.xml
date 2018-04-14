@@ -3,7 +3,7 @@
     package="com.example.bbahealth">
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -21,7 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".InfoOpenActivity"></activity>
+        <activity android:name=".InfoOpenActivity" />
+        <activity
+            android:name=".InitialActivity"
+            android:label="@string/title_activity_initial"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

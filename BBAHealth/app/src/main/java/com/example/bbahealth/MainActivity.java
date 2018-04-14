@@ -21,12 +21,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    InfoFragment infoFragment = new InfoFragment();
-    MapsFragment mapsFragment = new MapsFragment();
-    RecordFragment recordFragment = new RecordFragment();
-    TrackerFragment trackerFragment = new TrackerFragment();
-    SupportFragment supportFragment = new SupportFragment();
-
+    public boolean firstTime = false;
     public boolean infoViewOpen = true;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -68,6 +63,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if(!firstTime){
+            Intent intent = new Intent (this, InitialActivity.class);
+            startActivity(intent);
+        }
 
         BottomNavigationView navigation = findViewById(R.id.navigation);
         NavBarHelper.disableShiftMode(navigation);
