@@ -21,7 +21,8 @@ public class SupportFragment extends Fragment {
 
     View view;
 
-    String[] TO = {"pals@tst.nhs.uk"};
+    String[] TO = {"harrisonbennett@student.plymouth.ac.uk"};
+    //String[] TO = {"pals@tst.nhs.uk"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,7 +42,7 @@ public class SupportFragment extends Fragment {
                     SecurityException, IllegalStateException {
 
                 Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:01823344202"));
+                intent.setData(Uri.parse("tel:07720251053"));
                 startActivity(intent);
 
                 //Toast.makeText(getActivity().getApplicationContext(), "Calling" ,Toast.LENGTH_LONG).show();

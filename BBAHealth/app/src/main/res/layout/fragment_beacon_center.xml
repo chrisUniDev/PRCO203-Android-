@@ -13,7 +13,7 @@
         android:layout_centerHorizontal="true"
         android:textAlignment="center"
         android:paddingTop="15dp"
-        android:text="Beacon Center Map"
+        android:text=""
         android:textStyle="bold"
         android:textColor="#0000ff"
         />

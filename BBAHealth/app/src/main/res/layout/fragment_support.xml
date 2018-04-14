@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.bbahealth.TrackerFragment"
-    android:background="#efefef"
+    android:background="#ffffff"
     >
 
     <ImageButton
@@ -29,15 +29,16 @@
 
     <TextView
         android:id="@+id/textViewSupportTitle"
-        android:layout_width="match_parent"
+        android:layout_width="325dp"
         android:layout_height="60dp"
         android:text="@string/other_support"
         android:textStyle="bold"
         android:textSize="20sp"
         android:paddingTop="15dp"
         android:paddingLeft="10dp"
+        android:layout_centerHorizontal="true"
         android:layout_below="@+id/imageButtonNHSTwo"
-        android:background="#D4D4D4"
+        android:background="#16a0ce"
         />
 
     <TextView

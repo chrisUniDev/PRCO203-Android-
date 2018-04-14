@@ -8,6 +8,17 @@
     >
 
     <TextView
+        android:id="@+id/textViewClock"
+        android:layout_width="325dp"
+        android:layout_height="60dp"
+        android:text="Timer"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:background="#16a0ce"
+        />
+
+    <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="25dp"
@@ -15,40 +26,18 @@
         android:textAlignment="center"
         android:textSize="15sp"
         android:layout_margin="10dp"
+        android:layout_below="@id/textViewClock"
         />
 
-    <TextView
-        android:id="@+id/textViewInputNote"
-        android:layout_width="230dp"
-        android:layout_height="75dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp"
-        android:text="@string/add_a_note_to_help_remind_you_of_this_meeting"
-        android:textSize="15sp"
-        android:paddingLeft="15dp"
-        android:paddingStart="15dp"
-        />
-
-    <EditText
-        android:id="@+id/editTextInputNote"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/textView"
-        android:layout_toRightOf="@id/textViewInputNote"
-        android:layout_toEndOf="@id/textViewInputNote"
-        android:layout_marginTop="10dp"
-        />
 
     <ImageButton
         android:id="@+id/imageViewRecordButton"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
         android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/ic_record_button"
-        android:layout_below="@id/editTextInputNote"
+        android:layout_below="@id/textView"
         />
 
 </RelativeLayout>
