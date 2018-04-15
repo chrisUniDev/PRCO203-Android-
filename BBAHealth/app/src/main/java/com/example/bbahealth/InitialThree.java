@@ -53,20 +53,28 @@ public class InitialThree extends Fragment {
                 switch (position) {
                     case 0:
                         Toast.makeText(getActivity(), "You have chosen bladder cancer", Toast.LENGTH_SHORT).show();
+                        // call function and pass variable
                     case 1:
                         Toast.makeText(getActivity(), "You have chosen breast cancer", Toast.LENGTH_SHORT).show();
+                        // call function and pass variable
                     case 2:
                         Toast.makeText(getActivity(), "You have chosen gynae cancer", Toast.LENGTH_SHORT).show();
+                        // call function and pass variable
                     case 3:
                         Toast.makeText(getActivity(), "You have chosen head & neck cancer", Toast.LENGTH_SHORT).show();
+                        // call function and pass variable
                     case 4:
                         Toast.makeText(getActivity(), "You have chosen lower GI cancer", Toast.LENGTH_SHORT).show();
+                        // call function and pass variable
                     case 5:
                         Toast.makeText(getActivity(), "You have chosen prostate cancer", Toast.LENGTH_SHORT).show();
+                        // call function and pass variable
                     case 6:
                         Toast.makeText(getActivity(), "You have chosen skin cancer", Toast.LENGTH_SHORT).show();
+                        // call function and pass variable
                     case 7:
                         Toast.makeText(getActivity(), "You have chosen upper GI cancer", Toast.LENGTH_SHORT).show();
+                        // call function and pass variable
                 }
             }
         });
