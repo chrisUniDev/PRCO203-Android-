@@ -23,18 +23,7 @@ public class HospitalFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_hospital, container, false);
 
         TextView googleMaps = (TextView) view.findViewById(R.id.textViewHospitalMap);
-        //ImageButton zoomHospital = (ImageButton) view.findViewById(R.id.imageViewHospital);
-
-//        zoomHospital.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(getActivity(), ZoomOneActivity.class);
-//                startActivity(intent);
-//
-//                //Toast.makeText(getActivity().getApplicationContext(), "Zoomed" ,Toast.LENGTH_LONG).show();
-//            }
-//        });
-
+        ImageButton zoomHospital = (ImageButton) view.findViewById(R.id.imageViewHospital);
 
         googleMaps.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +35,16 @@ public class HospitalFragment extends Fragment {
                 startActivity(intent);
 
                 //Toast.makeText(getActivity().getApplicationContext(), "Calling" ,Toast.LENGTH_LONG).show();
+            }
+        });
+
+        zoomHospital.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ZoomOneActivity.class);
+                startActivity(intent);
+
+                //Toast.makeText(getActivity().getApplicationContext(), "Zoomed" ,Toast.LENGTH_LONG).show();
             }
         });
 

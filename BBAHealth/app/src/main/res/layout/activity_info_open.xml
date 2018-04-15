@@ -22,17 +22,77 @@
             <ImageView
                 android:id="@+id/imageOpen"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="437dp"
                 android:src="@drawable/ic_card_image_one"
                 android:layout_alignParentTop="true"
                 android:scaleType="fitStart"
                 />
 
             <TextView
+                android:id="@+id/textViewSideEffects"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="tetst"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/side_effects"
+                android:textStyle="bold"
+                android:textColor="#000000"
                 android:layout_below="@+id/imageOpen"
+                />
+
+            <TextView
+                android:id="@+id/textViewSideEffectOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="@string/side_effect_1"
+                android:textColor="#000000"
+                android:layout_below="@+id/textViewSideEffects"
+                />
+
+            <TextView
+                android:id="@+id/textViewSideEffectTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="@string/side_effect_2"
+                android:textColor="#000000"
+                android:layout_below="@+id/textViewSideEffectOne"
+                />
+
+            <TextView
+                android:id="@+id/textViewSideEffectThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="@string/side_effect_3"
+                android:textColor="#000000"
+                android:layout_below="@+id/textViewSideEffectTwo"
+                />
+
+            <TextView
+                android:id="@+id/textViewSymptomsTitle"
+                android:layout_width="325dp"
+                android:layout_height="30dp"
+                android:text="@string/how_to_relieve_your_symptoms"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/shadow_box"
+                android:elevation="10dp"
+                android:layout_below="@+id/textViewSideEffectThree"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewSymptomsTitle"
+                android:text="@string/lorem_ipsum"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="10dp"
                 />
 
         </RelativeLayout>

@@ -42,4 +42,11 @@
     <string name="if_you_do_not_know_which_pathway_you_are_on_please_check_with_your_consultant">If you do not know which pathway you are on, please check with your consultant.</string>
     <string name="select_cancer">Select Cancer</string>
     <string name="tap_one_or_multiple_to_select_options">Tap one or multiple to select options</string>
+    <string name="web_links">Web Links</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet purus mi. Vestibulum scelerisque, enim sed varius viverra, enim mauris lacinia lectus, et eleifend lectus ipsum eget mi. Donec tempor, nulla non condimentum mattis, est turpis facilisis urna, eget dictum neque ipsum et tortor. Pellentesque ac ex sit amet ipsum rhoncus hendrerit. Nullam vitae arcu ut tellus mollis viverra vel vel felis. Donec sit amet vulputate ipsum. Sed id nulla aliquam turpis interdum tempor. Sed id sapien ante. Duis et nulla egestas, commodo risus ut, tristique ante. Pellentesque viverra ligula vel felis elementum semper. Aliquam condimentum, diam vel imperdiet auctor, risus quam ultrices est, quis ultricies lectus odio at metus. Sed egestas imperdiet dui, vel hendrerit tortor tristique id. Cras nisl elit, gravida auctor tortor eu, ultrices pharetra ipsum. Duis dolor nulla, consequat non gravida sit amet, volutpat varius purus. Nunc rutrum aliquam ante eu ultrices. Nam nec nibh bibendum, tempor magna a, luctus est. Donec aliquam lacus orci, consectetur posuere massa interdum a. Donec volutpat dignissim diam a tristique. Fusce suscipit tortor ut ligula consequat, vitae luctus leo tincidunt. Donec malesuada arcu sed cursus sagittis. Fusce vitae ipsum et est iaculis ullamcorper at eu urna. Sed eros diam, tempus a placerat vel, auctor id quam. Praesent rhoncus ligula sit amet magna dictum, ut commodo metus sollicitudin.</string>
+    <string name="side_effects">Side Effects:</string>
+    <string name="side_effect_1">- Side Effect 1</string>
+    <string name="side_effect_2">- Side Effect 2</string>
+    <string name="side_effect_3">- Side Effect 3</string>
+    <string name="how_to_relieve_your_symptoms">How to relieve your symptoms</string>
 </resources>
