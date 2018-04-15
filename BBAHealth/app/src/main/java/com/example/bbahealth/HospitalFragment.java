@@ -23,7 +23,7 @@ public class HospitalFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_hospital, container, false);
 
         TextView googleMaps = (TextView) view.findViewById(R.id.textViewHospitalMap);
-        ImageButton zoomHospital = (ImageButton) view.findViewById(R.id.imageViewHospital);
+        //ImageButton zoomHospital = (ImageButton) view.findViewById(R.id.imageViewHospital);
 
 //        zoomHospital.setOnClickListener(new View.OnClickListener() {
 //            @Override
