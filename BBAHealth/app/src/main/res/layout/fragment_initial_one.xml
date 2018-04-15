@@ -29,7 +29,7 @@
         android:layout_centerHorizontal="true"
         android:text="@string/welcome"
         android:textColor="@color/colorWhite"
-        android:textSize="20dp"
+        android:textSize="23dp"
         />
 
     <ImageView
@@ -49,7 +49,7 @@
         android:layout_marginTop="50dp"
         android:text="@string/app_name_app_is_your_companion_on_the_road_to_recovery"
         android:textColor="@color/colorWhite"
-        android:textSize="18dp"
+        android:textSize="20dp"
         android:textAlignment="center"
         />
 
@@ -64,6 +64,6 @@
         android:text="@string/keep_track_of_your_progress_throughout_your_treatment_with_relevant_information_every_step_is_one_step_closer_to_recovery"
         android:textAlignment="center"
         android:textColor="@color/colorWhite"
-        android:textSize="19dp" />
+        android:textSize="21dp" />
 
 </RelativeLayout>

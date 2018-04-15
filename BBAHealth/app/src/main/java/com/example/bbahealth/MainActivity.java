@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                     infoViewOpen = false;
                     return true;
                 case R.id.navigation_tracker:
-                    setTitle("Tracker");
+                    setTitle("Journey Tracker");
                     switchToFragmentTracker();
                     infoViewOpen = false;
                     return true;

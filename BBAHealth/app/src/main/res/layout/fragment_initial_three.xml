@@ -40,7 +40,7 @@
         android:layout_below="@id/textViewSelectCancer"
         android:text="@string/tap_one_or_multiple_to_select_options"
         android:textColor="@color/colorWhite"
-
+        android:textSize="16dp"
         />
 
     <ListView
@@ -48,6 +48,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/textViewCancerText"
-        android:layout_marginTop="29dp" />
+        android:layout_marginTop="2dp"
+
+        />
 
 </RelativeLayout>
