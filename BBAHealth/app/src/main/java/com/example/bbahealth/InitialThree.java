@@ -17,12 +17,9 @@ public class InitialThree extends Fragment {
     public InitialThree() {
         // Required empty public constructor
     }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         // needs to be inflated first
         View view = inflater.inflate(R.layout.fragment_initial_three, container, false);
 
@@ -72,14 +69,8 @@ public class InitialThree extends Fragment {
                 }
             }
         });
-
-
-
         // Inflate the layout for this fragment
         return view;
-
-
-
     }
 
 }

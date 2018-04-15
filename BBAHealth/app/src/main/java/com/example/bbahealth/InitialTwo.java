@@ -14,13 +14,9 @@ import android.widget.Toast;
 
 public class InitialTwo extends Fragment {
 
-
-
-
     public InitialTwo() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,9 +24,7 @@ public class InitialTwo extends Fragment {
 
         // needs to be inflated first
         View view = inflater.inflate(R.layout.fragment_initial_two, container, false);
-
         String[] pathwayOptions = {"Palliative", "Radical"};
-
         ListView listView = (ListView) view.findViewById(R.id.listViewPathwayOptions);
 
         // figuring out what to draw on screen
@@ -51,14 +45,7 @@ public class InitialTwo extends Fragment {
                 }
             }
         });
-
         // Inflate the layout for this fragment
         return view;
-
-
-
     }
-
-
-
 }
