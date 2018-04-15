@@ -13,7 +13,6 @@ import android.widget.Toast;
 public class InfoFragment extends Fragment {
 
     View view;
-    MainActivity mainActivity = new MainActivity();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -23,17 +22,12 @@ public class InfoFragment extends Fragment {
 
         GridView gridView = view.findViewById(R.id.gridViewCards);
 
-        //int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 10, getResources().getDisplayMetrics());
-        //gridView.setMinimumWidth(px);
-        //gridView.setMinimumHeight(10);
-
         gridView.setAdapter(new ImageAdapter(getActivity()));
-
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                if (mainActivity.infoViewOpen) {
+                if (MainActivity.infoViewOpen) {
                     openInfoView();
                     Toast.makeText(getActivity().getApplicationContext(), "Card: " + i, Toast.LENGTH_SHORT).show();
                 }

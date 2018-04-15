@@ -11,7 +11,7 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity {
 
     public boolean firstTime = true;
-    public boolean infoViewOpen = true;
+    public static boolean infoViewOpen = true;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
