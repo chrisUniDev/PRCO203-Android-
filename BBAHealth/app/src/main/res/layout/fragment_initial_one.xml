@@ -4,13 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InitialTwo"
+    tools:context=".InitialOne"
     >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="One"
+    <ImageView
+        android:id="@+id/imageViewBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/colorPrimary"
         />
+
+    <ImageView
+        android:id="@+id/imageViewBackgroundBubbles"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/ic_dots_one"
+        />
+
+    <TextView
+        android:id="@+id/textViewWelcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/welcome"
+        android:textColor="@color/colorWhite"
+        android:textSize="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/ic_bba_logo" />
+
+    <TextView
+        android:id="@+id/textViewFirstText"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageViewLogo"
+        android:layout_marginTop="50dp"
+        android:text="@string/app_name_app_is_your_companion_on_the_road_to_recovery"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/textViewSecondText"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewFirstText"
+        android:layout_alignStart="@+id/textViewFirstText"
+        android:layout_below="@+id/textViewFirstText"
+        android:layout_marginTop="17dp"
+        android:text="@string/keep_track_of_your_progress_throughout_your_treatment_with_relevant_information_every_step_is_one_step_closer_to_recovery"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="19dp" />
+
+
+
+
 
 </RelativeLayout>

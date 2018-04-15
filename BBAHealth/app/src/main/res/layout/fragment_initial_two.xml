@@ -7,10 +7,51 @@
     tools:context=".InitialTwo"
     >
 
+    <ImageView
+        android:id="@+id/imageViewBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/colorPrimary"
+        />
+
+    <ImageView
+        android:id="@+id/imageViewBackgroundBubbles"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/ic_dots_two"
+        />
+
     <TextView
+        android:id="@+id/textViewSelectPathway"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="@string/select_pathway"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        />
+
+    <TextView
+        android:id="@+id/textViewPathwayText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/textViewSelectPathway"
+        android:text="@string/if_you_do_not_know_which_pathway_you_are_on_please_check_with_your_consultant"
+        android:textColor="@color/colorWhite"
+
+        />
+
+    <ListView
+        android:id="@+id/listViewPathwayOptions"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Two"
-        />
+
+
+        android:layout_below="@+id/textViewPathwayText"
+        android:layout_marginTop="29dp" />
+
 
 </RelativeLayout>

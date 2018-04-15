@@ -35,4 +35,11 @@
     <string name="find_out_more_information">Find out more information</string>
     <string name="hospital_map"><u>Hospital Map</u></string>
     <string name="title_activity_initial">InitialActivity</string>
+    <string name="welcome">Welcome</string>
+    <string name="app_name_app_is_your_companion_on_the_road_to_recovery">(App Name) app is your companion on the road to recovery</string>
+    <string name="keep_track_of_your_progress_throughout_your_treatment_with_relevant_information_every_step_is_one_step_closer_to_recovery">Keep track of your progress throughout your treatment, with relevant information. Every step is one step closer to recovery!</string>
+    <string name="select_pathway">Select Pathway</string>
+    <string name="if_you_do_not_know_which_pathway_you_are_on_please_check_with_your_consultant">If you do not know which pathway you are on, please check with your consultant.</string>
+    <string name="select_cancer">Select Cancer</string>
+    <string name="tap_one_or_multiple_to_select_options">Tap one or multiple to select options</string>
 </resources>
