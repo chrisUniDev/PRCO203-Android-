@@ -18,7 +18,7 @@ public class TrackerFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_initial_two, container, false);
+        View view = inflater.inflate(R.layout.fragment_tracker, container, false);
 
 
         TabHost tabHost = (TabHost) view.findViewById(R.id.TabHostStages) ;
@@ -28,49 +28,49 @@ public class TrackerFragment extends Fragment{
         // Stage/tab 1
         TabHost.TabSpec spec = tabHost.newTabSpec("Tab One");
         spec.setContent(R.id.Stage_1);
-        spec.setIndicator("Tab One");
+        spec.setIndicator("1");
         tabHost.addTab(spec);
 
         // Stage/tab 2
         spec = tabHost.newTabSpec("Tab Two");
         spec.setContent(R.id.Stage_2);
-        spec.setIndicator("Tab Two");
+        spec.setIndicator("2");
         tabHost.addTab(spec);
 
         // Stage/tab 3
         spec = tabHost.newTabSpec("Tab Three");
         spec.setContent(R.id.Stage_3);
-        spec.setIndicator("Tab Three");
+        spec.setIndicator("3");
         tabHost.addTab(spec);
 
         // Stage/tab 4
         spec = tabHost.newTabSpec("Tab Four");
         spec.setContent(R.id.Stage_4);
-        spec.setIndicator("Tab Four");
+        spec.setIndicator("4");
         tabHost.addTab(spec);
 
         // Stage/tab 5
         spec = tabHost.newTabSpec("Tab Five");
         spec.setContent(R.id.Stage_5);
-        spec.setIndicator("Tab Five");
+        spec.setIndicator("5");
         tabHost.addTab(spec);
 
         // Stage/tab 6
         spec = tabHost.newTabSpec("Tab Six");
         spec.setContent(R.id.Stage_6);
-        spec.setIndicator("Tab Six");
+        spec.setIndicator("6");
         tabHost.addTab(spec);
 
         // Stage/tab 7
         spec = tabHost.newTabSpec("Tab Seven");
         spec.setContent(R.id.Stage_7);
-        spec.setIndicator("Tab Seven");
+        spec.setIndicator("7");
         tabHost.addTab(spec);
 
         // Stage/tab 8
         spec = tabHost.newTabSpec("Tab Eight");
         spec.setContent(R.id.Stage_8);
-        spec.setIndicator("Tab Eight");
+        spec.setIndicator("8");
         tabHost.addTab(spec);
 
         // Inflate the layout for this fragment
