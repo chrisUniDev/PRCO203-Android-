@@ -1,11 +1,10 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.bbahealth.TrackerFragment"
-    android:background="#ffffff"
-    >
+    android:background="#ffffff">
 
     <ImageButton
         android:id="@+id/imageButtonNHSOne"
@@ -14,7 +13,9 @@
         android:layout_marginTop="40dp"
         android:layout_marginBottom="25dp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/ic_support_one"
+        android:src="@drawable/ic_support_one"
+        android:background="@drawable/shadow_blank"
+        android:elevation="10dp"
         />
 
     <ImageButton
@@ -24,7 +25,9 @@
         android:layout_marginBottom="40dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/imageButtonNHSOne"
-        android:background="@drawable/ic_support_two"
+        android:src="@drawable/ic_support_two"
+        android:background="@drawable/shadow_blank"
+        android:elevation="10dp"
         />
 
     <TextView
@@ -38,7 +41,8 @@
         android:paddingLeft="10dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/imageButtonNHSTwo"
-        android:background="#16a0ce"
+        android:background="@drawable/shadow_box"
+        android:elevation="10dp"
         />
 
     <TextView

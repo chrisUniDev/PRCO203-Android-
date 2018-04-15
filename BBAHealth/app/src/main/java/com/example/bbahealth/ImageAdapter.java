@@ -30,18 +30,28 @@ public class ImageAdapter extends BaseAdapter{
 
     // create a new ImageView for each item referenced by the Adapter
     public View getView(int position, View convertView, ViewGroup parent) {
-        ImageView imageView = new ImageView(context);
+
+        ImageView imageView;
+        if (convertView == null) {
+            // if it's not recycled, initialize some attributes
+            imageView = new ImageView(context);
+            imageView.setLayoutParams(new ViewGroup.LayoutParams(800, 1000));
+            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            imageView.setPadding(0, 10, 0, 5);;
+        } else {
+            imageView = (ImageView) convertView;
+        }
 
         imageView.setImageResource(ThumbIds[position]);
         return imageView;
     }
 
     private Integer[] ThumbIds = {
-            R.drawable.ic_card_image_one_one,
-            R.drawable.ic_card_image_two_one,
-            R.drawable.ic_card_image_three_one,
-            R.drawable.ic_card_image_one_one,
-            R.drawable.ic_card_image_two_one,
-            R.drawable.ic_card_image_three_one
+            R.drawable.ic_card_image_one,
+            R.drawable.ic_card_image_two,
+            R.drawable.ic_card_image_three,
+            R.drawable.ic_card_image_one,
+            R.drawable.ic_card_image_two,
+            R.drawable.ic_card_image_three
     };
 }
