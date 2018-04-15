@@ -13,15 +13,15 @@
         android:layout_centerHorizontal="true"
         android:textAlignment="center"
         android:paddingTop="15dp"
-        android:text=""
-        android:textStyle="bold"
-        android:textColor="#0000ff"
+        android:text="Work In Progress"
+        android:textSize="20sp"
         />
+        <!--android:textStyle="bold"-->
+        <!--android:textColor="#0000ff"-->
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/ic_map_image"
         android:scaleType="centerInside"
         android:layout_centerVertical="true"
         android:layout_marginBottom="150dp"

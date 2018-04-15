@@ -61,7 +61,7 @@ public class NewRecordingFragment extends Fragment {
                     recording = false;
                 }
 
-                Toast.makeText(getActivity().getApplicationContext(), "Testing", Toast.LENGTH_LONG).show();
+                //Toast.makeText(getActivity().getApplicationContext(), "Testing", Toast.LENGTH_LONG).show();
             }
 
             private void StopRecordingAudio() {
@@ -139,9 +139,9 @@ public class NewRecordingFragment extends Fragment {
                             PackageManager.PERMISSION_GRANTED;
 
                     if (StoragePermission && RecordPermission) {
-                        Toast.makeText(getActivity().getApplicationContext(), "Permission Granted", Toast.LENGTH_LONG).show();
+                        //Toast.makeText(getActivity().getApplicationContext(), "Permission Granted", Toast.LENGTH_LONG).show();
                     } else {
-                        Toast.makeText(getActivity().getApplicationContext(),"Permission Denied",Toast.LENGTH_LONG).show();
+                        //Toast.makeText(getActivity().getApplicationContext(),"Permission Denied",Toast.LENGTH_LONG).show();
                     }
                 }
                 break;

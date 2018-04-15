@@ -35,13 +35,11 @@ public class InitialTwo extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 0)
-                {
-                    Toast.makeText(getActivity(), "You have chosen Palliative pathway", Toast.LENGTH_SHORT).show();
-                }
-                else if (position == 1)
-                {
-                    Toast.makeText(getActivity(), "You have chosen Radical pathway", Toast.LENGTH_SHORT).show();
+                switch (position){
+                    case 0:
+                        Toast.makeText(getActivity(), "You have chosen Palliative pathway", Toast.LENGTH_SHORT).show();
+                    case 1:
+                        Toast.makeText(getActivity(), "You have chosen Radical pathway", Toast.LENGTH_SHORT).show();
                 }
             }
         });

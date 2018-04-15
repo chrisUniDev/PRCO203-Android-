@@ -5,14 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InitialThree"
+    android:background="@color/colorPrimary"
     >
-
-    <ImageView
-        android:id="@+id/imageViewBackground"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="@color/colorPrimary"
-        />
 
     <ImageView
         android:id="@+id/imageViewBackgroundBubbles"
@@ -44,12 +38,21 @@
         />
 
     <ListView
+        style="@style/WhiteListView"
         android:id="@+id/listViewCancerSelection"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/textViewCancerText"
         android:layout_marginTop="2dp"
+        />
 
+    <Button
+        android:id="@+id/buttonConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="Confirm"
         />
 
 </RelativeLayout>

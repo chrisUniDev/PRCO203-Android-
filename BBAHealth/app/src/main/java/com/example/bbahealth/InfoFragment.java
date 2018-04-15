@@ -28,18 +28,13 @@ public class InfoFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if (MainActivity.infoViewOpen) {
-                    openInfoView();
-                    Toast.makeText(getActivity().getApplicationContext(), "Card: " + i, Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getActivity(), InfoOpenActivity.class);
+                    startActivity(intent);
+                    //Toast.makeText(getActivity().getApplicationContext(), "Card: " + i, Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
         return view;
     }
-
-    public void openInfoView() {
-        Intent intent = new Intent(getActivity(), InfoOpenActivity.class);
-        startActivity(intent);
-    }
-
 }

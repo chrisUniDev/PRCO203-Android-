@@ -5,14 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InitialOne"
+    android:background="@color/colorPrimary"
     >
-
-    <ImageView
-        android:id="@+id/imageViewBackground"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="@color/colorPrimary"
-        />
 
     <ImageView
         android:id="@+id/imageViewBackgroundBubbles"
@@ -22,6 +16,7 @@
         />
 
     <TextView
+        style=""
         android:id="@+id/textViewWelcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

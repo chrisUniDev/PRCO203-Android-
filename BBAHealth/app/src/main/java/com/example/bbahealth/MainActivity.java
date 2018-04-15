@@ -10,7 +10,7 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
-    public boolean firstTime = true;
+    public boolean firstTime = false;
     public static boolean infoViewOpen = true;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                     infoViewOpen = false;
                     return true;
                 case R.id.navigation_tracker:
-                    setTitle("Journey Tracker");
+                    setTitle("Journey");
                     switchToFragmentTracker();
                     infoViewOpen = false;
                     return true;
