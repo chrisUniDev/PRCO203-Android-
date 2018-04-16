@@ -18,8 +18,8 @@
         android:paddingLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/shadow_box"
-        android:elevation="10dp"
+        android:background="@drawable/shadow_blue"
+        android:elevation="7dp"
         />
 
 

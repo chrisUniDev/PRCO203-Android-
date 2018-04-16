@@ -17,53 +17,74 @@
         android:paddingLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/shadow_box"
-        android:elevation="10dp"
+        android:background="@drawable/shadow_blue"
+        android:elevation="7dp"
+        />
+
+    <ImageButton
+        android:id="@+id/imageButtonNHSOneShadow"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textViewLinksTitle"
+        android:background="@drawable/shadow_white"
+        android:elevation="7dp"
         />
 
     <ImageButton
         android:id="@+id/imageButtonNHSOne"
         android:layout_width="300dp"
         android:layout_height="100dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="25dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/textViewLinksTitle"
-        android:src="@drawable/ic_support_one"
-        android:background="@drawable/shadow_blank"
-        android:elevation="10dp"
+        android:background="@drawable/ic_support_one_one"
+        android:elevation="8dp"
         />
 
     <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/ic_chome"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_chrome"
         android:layout_alignBottom="@id/imageButtonNHSOne"
         android:layout_alignRight="@id/imageButtonNHSOne"
-        android:elevation="15dp"
+        android:elevation="8dp"
         android:paddingBottom="5dp"
         android:paddingRight="5dp"
+        />
+
+    <ImageButton
+        android:id="@+id/imageButtonNHSTwoShadow"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageButtonNHSOne"
+        android:background="@drawable/shadow_white"
+        android:elevation="7dp"
         />
 
     <ImageButton
         android:id="@+id/imageButtonNHSTwo"
         android:layout_width="300dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="20dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/imageButtonNHSOne"
-        android:src="@drawable/ic_support_two"
-        android:background="@drawable/shadow_blank"
-        android:elevation="10dp"
+        android:background="@drawable/ic_support_two_two"
+        android:elevation="8dp"
         />
 
     <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/ic_chome"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_chrome"
         android:layout_alignBottom="@id/imageButtonNHSTwo"
         android:layout_alignRight="@id/imageButtonNHSTwo"
-        android:elevation="15dp"
+        android:elevation="8dp"
         android:paddingBottom="5dp"
         android:paddingRight="5dp"
         />
@@ -80,8 +101,8 @@
         android:layout_marginBottom="10dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/imageButtonNHSTwo"
-        android:background="@drawable/shadow_box"
-        android:elevation="10dp"
+        android:background="@drawable/shadow_blue"
+        android:elevation="7dp"
         />
 
     <TextView
