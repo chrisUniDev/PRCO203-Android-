@@ -175,10 +175,23 @@
                     <ImageView
                         android:id="@+id/ImageViewSecondStage"
                         android:layout_centerHorizontal="true"
-                        android:background="@color/colorPrimaryDark"
+                        android:background="@color/colorPrimary"
                         android:layout_width="350dp"
-                        android:layout_height="200dp"
+                        android:layout_height="400dp"
                         android:layout_marginTop="20dp" />
+
+                    <TextView
+                        android:id="@+id/textViewSecondStage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignLeft="@id/ImageViewSecondStage"
+                        android:layout_alignTop="@id/ImageViewSecondStage"
+                        android:layout_centerHorizontal="true"
+
+                        android:text="@string/_3_week_wait_progress"
+                        android:textColor="@color/colorWhite"
+                        />
                 </RelativeLayout>
 
                 <!-- Tab 3-->
