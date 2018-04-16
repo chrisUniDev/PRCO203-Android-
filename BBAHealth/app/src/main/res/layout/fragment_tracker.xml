@@ -48,6 +48,7 @@
                 android:layout_height="match_parent"
                 >
 
+                <!-- Tab content -->
                 <RelativeLayout
                     android:id="@+id/Stage_1"
                     android:layout_width="match_parent"
@@ -164,14 +165,13 @@
 
                 </RelativeLayout>
 
-
+                <!-- Tab 2-->
                 <RelativeLayout
                     android:id="@+id/Stage_2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     >
-
                     <ImageView
                         android:id="@+id/ImageViewSecondStage"
                         android:layout_centerHorizontal="true"
@@ -179,25 +179,104 @@
                         android:layout_width="350dp"
                         android:layout_height="200dp"
                         android:layout_marginTop="20dp" />
-
                 </RelativeLayout>
 
+                <!-- Tab 3-->
                 <RelativeLayout
                     android:id="@+id/Stage_3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     >
-
+                    <ImageView
+                        android:id="@+id/ImageViewThirdStage"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_width="350dp"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="20dp" />
                 </RelativeLayout>
 
+                <!-- Tab 4-->
                 <RelativeLayout
                     android:id="@+id/Stage_4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     >
+                    <ImageView
+                        android:id="@+id/ImageViewFourthStage"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_width="350dp"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="20dp" />
                 </RelativeLayout>
+
+                <!-- Tab 5-->
+                <RelativeLayout
+                    android:id="@+id/Stage_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <ImageView
+                        android:id="@+id/ImageViewFifthStage"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_width="350dp"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="20dp" />
+                </RelativeLayout>
+
+                <!-- Tab 6-->
+                <RelativeLayout
+                    android:id="@+id/Stage_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <ImageView
+                        android:id="@+id/ImageViewSixthStage"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_width="350dp"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="20dp" />
+                </RelativeLayout>
+
+                <!-- Tab 7-->
+                <RelativeLayout
+                    android:id="@+id/Stage_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <ImageView
+                        android:id="@+id/ImageViewSeventhStage"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_width="350dp"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="20dp" />
+                </RelativeLayout>
+
+                <!-- Tab 8-->
+                <RelativeLayout
+                    android:id="@+id/Stage_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <ImageView
+                        android:id="@+id/ImageViewEighthStage"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_width="350dp"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="20dp" />
+                </RelativeLayout>
+
             </FrameLayout>
         </LinearLayout>
     </TabHost>

@@ -24,7 +24,10 @@ public class InitialTwo extends Fragment {
 
         // needs to be inflated first
         View view = inflater.inflate(R.layout.fragment_initial_two, container, false);
-        String[] pathwayOptions = {"Palliative", "Radical"};
+        String[] pathwayOptions = {
+                "Palliative",
+                "Radical"
+        };
         ListView listView = (ListView) view.findViewById(R.id.listViewPathwayOptions);
 
         // figuring out what to draw on screen
