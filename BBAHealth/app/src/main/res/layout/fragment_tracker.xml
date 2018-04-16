@@ -48,7 +48,7 @@
                 android:layout_height="match_parent"
                 >
 
-                <!-- Tab content -->
+                <!-- Tab 1 -->
                 <RelativeLayout
                     android:id="@+id/Stage_1"
                     android:layout_width="match_parent"
@@ -181,17 +181,42 @@
                         android:layout_marginTop="20dp" />
 
                     <TextView
-                        android:id="@+id/textViewSecondStage"
+                        android:id="@+id/textViewSecondStageTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
-                        android:layout_alignLeft="@id/ImageViewSecondStage"
-                        android:layout_alignTop="@id/ImageViewSecondStage"
+                        android:layout_alignTop="@+id/ImageViewSecondStage"
+                        android:layout_marginTop="5dp"
                         android:layout_centerHorizontal="true"
 
                         android:text="@string/_3_week_wait_progress"
                         android:textColor="@color/colorWhite"
                         />
+                    <TextView
+                        android:id="@+id/textViewSecondStageContent"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignTop="@+id/ImageViewSecondStage"
+                        android:layout_marginTop="100dp"
+                        android:layout_centerHorizontal="true"
+
+                        android:text="Looking at scans"
+                        android:textColor="@color/colorWhite"
+                        android:textAlignment="center"
+                        />
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/floatingActionButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/ImageViewSecondStage"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_alignRight="@+id/ImageViewSecondStage"
+                        android:clickable="true"
+                        android:src="@android:drawable/ic_dialog_info" />
                 </RelativeLayout>
 
                 <!-- Tab 3-->
@@ -202,12 +227,62 @@
                     android:orientation="vertical"
                     >
                     <ImageView
-                        android:id="@+id/ImageViewThirdStage"
+                        android:id="@+id/ImageViewThirdStageTreatmentOne"
                         android:layout_centerHorizontal="true"
-                        android:background="@color/colorPrimaryDark"
+                        android:background="@color/colorPrimary"
                         android:layout_width="350dp"
-                        android:layout_height="200dp"
+                        android:layout_height="25dp"
                         android:layout_marginTop="20dp" />
+
+                    <TextView
+                        android:id="@+id/textViewTotalRounds"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignTop="@+id/ImageViewThirdStageTreatmentOne"
+                        android:layout_alignLeft="@+id/ImageViewThirdStageTreatmentOne"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="2dp"
+
+                        android:text="@string/total_rounds_of_treament_week_days"
+                        android:textColor="@color/colorWhite"
+                        />
+
+                    <ImageView
+                        android:id="@+id/ImageViewThirdStageTreatmentTwo"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/colorPrimary"
+                        android:layout_width="350dp"
+                        android:layout_height="150dp"
+                        android:layout_below="@+id/ImageViewThirdStageTreatmentOne"
+                        android:layout_marginTop="20dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/textViewTreatmentNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/ImageViewThirdStageTreatmentTwo"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:text="00"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="45sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/textViewTreatmentText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_below="@+id/textViewTreatmentNo"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/treatment_sessions_left"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
                 </RelativeLayout>
 
                 <!-- Tab 4-->
@@ -220,10 +295,20 @@
                     <ImageView
                         android:id="@+id/ImageViewFourthStage"
                         android:layout_centerHorizontal="true"
-                        android:background="@color/colorPrimaryDark"
+                        android:background="@color/colorPrimary"
                         android:layout_width="350dp"
-                        android:layout_height="200dp"
+                        android:layout_height="220dp"
                         android:layout_marginTop="20dp" />
+
+                    <TextView
+                        android:id="@+id/textViewWIP4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="WIP"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="40sp" />
                 </RelativeLayout>
 
                 <!-- Tab 5-->
@@ -236,10 +321,20 @@
                     <ImageView
                         android:id="@+id/ImageViewFifthStage"
                         android:layout_centerHorizontal="true"
-                        android:background="@color/colorPrimaryDark"
+                        android:background="@color/colorPrimary"
                         android:layout_width="350dp"
-                        android:layout_height="200dp"
+                        android:layout_height="220dp"
                         android:layout_marginTop="20dp" />
+
+                    <TextView
+                        android:id="@+id/textViewWIP5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="WIP"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="40sp" />
                 </RelativeLayout>
 
                 <!-- Tab 6-->
@@ -252,10 +347,20 @@
                     <ImageView
                         android:id="@+id/ImageViewSixthStage"
                         android:layout_centerHorizontal="true"
-                        android:background="@color/colorPrimaryDark"
+                        android:background="@color/colorPrimary"
                         android:layout_width="350dp"
-                        android:layout_height="200dp"
+                        android:layout_height="220dp"
                         android:layout_marginTop="20dp" />
+                    <TextView
+                        android:id="@+id/textViewWIP6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="WIP"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="40sp" />
+
                 </RelativeLayout>
 
                 <!-- Tab 7-->
@@ -268,10 +373,20 @@
                     <ImageView
                         android:id="@+id/ImageViewSeventhStage"
                         android:layout_centerHorizontal="true"
-                        android:background="@color/colorPrimaryDark"
+                        android:background="@color/colorPrimary"
                         android:layout_width="350dp"
-                        android:layout_height="200dp"
+                        android:layout_height="220dp"
                         android:layout_marginTop="20dp" />
+
+                    <TextView
+                        android:id="@+id/textViewWIP7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="WIP"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="40sp" />
                 </RelativeLayout>
 
                 <!-- Tab 8-->
@@ -284,10 +399,20 @@
                     <ImageView
                         android:id="@+id/ImageViewEighthStage"
                         android:layout_centerHorizontal="true"
-                        android:background="@color/colorPrimaryDark"
+                        android:background="@color/colorPrimary"
                         android:layout_width="350dp"
-                        android:layout_height="200dp"
+                        android:layout_height="220dp"
                         android:layout_marginTop="20dp" />
+
+                    <TextView
+                        android:id="@+id/textViewWIP8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="WIP"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="40sp" />
                 </RelativeLayout>
 
             </FrameLayout>

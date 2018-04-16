@@ -50,4 +50,6 @@
     <string name="side_effect_3">- Side Effect 3</string>
     <string name="how_to_relieve_your_symptoms">How to relieve your symptoms</string>
     <string name="_3_week_wait_progress">3 week wait progress...</string>
+    <string name="total_rounds_of_treament_week_days">Total rounds of treament (Week Days)</string>
+    <string name="treatment_sessions_left">Treatment sessions left</string>
 </resources>
