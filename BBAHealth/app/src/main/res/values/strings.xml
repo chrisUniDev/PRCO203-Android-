@@ -43,7 +43,7 @@
     <string name="select_cancer">Select Cancer</string>
     <string name="tap_one_or_multiple_to_select_options">Tap one or multiple to select options</string>
     <string name="web_links">Web Links</string>
-    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet purus mi. Vestibulum scelerisque, enim sed varius viverra, enim mauris lacinia lectus, et eleifend lectus ipsum eget mi. Donec tempor, nulla non condimentum mattis, est turpis facilisis urna, eget dictum neque ipsum et tortor. Pellentesque ac ex sit amet ipsum rhoncus hendrerit. Nullam vitae arcu ut tellus mollis viverra vel vel felis. Donec sit amet vulputate ipsum. Sed id nulla aliquam turpis interdum tempor. Sed id sapien ante. Duis et nulla egestas, commodo risus ut, tristique ante. Pellentesque viverra ligula vel felis elementum semper. Aliquam condimentum, diam vel imperdiet auctor, risus quam ultrices est, quis ultricies lectus odio at metus. Sed egestas imperdiet dui, vel hendrerit tortor tristique id. Cras nisl elit, gravida auctor tortor eu, ultrices pharetra ipsum. Duis dolor nulla, consequat non gravida sit amet, volutpat varius purus. Nunc rutrum aliquam ante eu ultrices. Nam nec nibh bibendum, tempor magna a, luctus est. Donec aliquam lacus orci, consectetur posuere massa interdum a. Donec volutpat dignissim diam a tristique. Fusce suscipit tortor ut ligula consequat, vitae luctus leo tincidunt. Donec malesuada arcu sed cursus sagittis. Fusce vitae ipsum et est iaculis ullamcorper at eu urna. Sed eros diam, tempus a placerat vel, auctor id quam. Praesent rhoncus ligula sit amet magna dictum, ut commodo metus sollicitudin.</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet purus mi. Vestibulum scelerisque, enim sed varius viverra, enim mauris lacinia lectus, et eleifend lectus ipsum eget mi. </string>
     <string name="side_effects">Side Effects:</string>
     <string name="side_effect_1">- Side Effect 1</string>
     <string name="side_effect_2">- Side Effect 2</string>
@@ -52,4 +52,8 @@
     <string name="_3_week_wait_progress">3 week wait progress...</string>
     <string name="total_rounds_of_treament_week_days">Total rounds of treament (Week Days)</string>
     <string name="treatment_sessions_left">Treatment sessions left</string>
+    <string name="red_cross_links">Red Cross Links</string>
+    <string name="wheelchairs_available">Wheelchairs Available</string>
+    <string name="available_wheelchairs">Available 24 hours a day. 7 days a week. We have wheelchairs available at most of the main entrances for patients and visitors to use.</string>
+    <string name="info">Info</string>
 </resources>

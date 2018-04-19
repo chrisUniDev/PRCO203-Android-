@@ -9,17 +9,76 @@
 
     <TextView
         android:id="@+id/textViewTransportTitle"
-        android:layout_width="325dp"
+        android:layout_width="330dp"
         android:layout_height="30dp"
         android:text="Other Transport Options"
         android:textStyle="bold"
         android:textSize="20sp"
         android:textColor="#ffffff"
         android:paddingLeft="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="25dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/shadow_blue"
         android:elevation="7dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageRedCross"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textViewTransportTitle"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"
+        android:background="@drawable/ic_red_cross"
+        />
+
+    <TextView
+        android:id="@+id/textViewRedCross"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/imageRedCross"
+        android:layout_below="@id/textViewTransportTitle"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:paddingTop="13dp"
+        android:text="@string/red_cross_links"
+        android:textSize="17sp"
+        />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/textViewRedCross"
+        android:layout_below="@id/textViewTransportTitle"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:paddingTop="13dp"
+        android:text="@string/info"
+        android:textSize="17sp"
+        android:textColor="@color/colorPrimary"
+        />
+
+    <TextView
+        android:id="@+id/textViewWheelchairs"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/imageRedCross"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"
+        android:text="@string/wheelchairs_available"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/textViewWheelchairs"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="@string/available_wheelchairs"
+        android:textSize="17sp"
         />
 
 

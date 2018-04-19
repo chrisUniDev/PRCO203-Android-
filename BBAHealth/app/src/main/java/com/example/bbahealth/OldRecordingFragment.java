@@ -14,7 +14,6 @@ import java.io.IOException;
 public class OldRecordingFragment extends Fragment {
 
     View view;
-    Button playButton, stopButton;
     MediaPlayer mediaPlayer;
     String AudioSavePathInDevice = null;
 
@@ -27,11 +26,6 @@ public class OldRecordingFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_old_recording, container, false);
-
-
-        //playButton = (Button) view.findViewById(R.id.buttonPlay);
-        //stopButton = (Button) view.findViewById(R.id.buttonStop);
-
 
 //        playButton.setOnClickListener(new View.OnClickListener() {
 //            @Override

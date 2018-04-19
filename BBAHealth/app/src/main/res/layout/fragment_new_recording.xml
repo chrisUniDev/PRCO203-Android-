@@ -10,7 +10,7 @@
     <TextView
         android:id="@+id/textViewClock"
         android:layout_width="325dp"
-        android:layout_height="50dp"
+        android:layout_height="70dp"
         android:text="Timer In Development"
         android:textStyle="bold"
         android:textSize="20sp"

@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InitialOne"
-    android:background="@color/colorPrimary"
     >
 
     <ImageView
         android:id="@+id/imageViewBackgroundBubbles"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:src="@drawable/ic_dots_one"
+        android:src="@drawable/ic_dots_two"
         />
 
     <TextView
@@ -33,7 +32,8 @@
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:src="@drawable/ic_bba_logo" />
+        android:src="@drawable/ic_bba_logo"
+        />
 
     <TextView
         android:id="@+id/textViewFirstText"

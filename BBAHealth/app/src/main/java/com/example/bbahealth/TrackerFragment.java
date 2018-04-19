@@ -1,6 +1,8 @@
 package com.example.bbahealth;
 
 import android.content.Context;
+import android.content.Intent;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TabHost;
 
 public class TrackerFragment extends Fragment{
@@ -21,7 +24,8 @@ public class TrackerFragment extends Fragment{
         View view = inflater.inflate(R.layout.fragment_tracker, container, false);
 
 
-        TabHost tabHost = (TabHost) view.findViewById(R.id.TabHostStages) ;
+        TabHost tabHost = (TabHost) view.findViewById(R.id.TabHostStages);
+        ImageButton trackerButton = (ImageButton) view.findViewById(R.id.trackerInfoOpenButton);
         tabHost.setup();
 
 
@@ -72,6 +76,15 @@ public class TrackerFragment extends Fragment{
         spec.setContent(R.id.Stage_8);
         spec.setIndicator("8");
         tabHost.addTab(spec);
+
+        trackerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), TrackerInfoOpen.class);
+                startActivity(intent);
+                //Toast.makeText(getActivity().getApplicationContext(), "Opening", Toast.LENGTH_LONG).show();
+            }
+        });
 
         // Inflate the layout for this fragment
         return view;

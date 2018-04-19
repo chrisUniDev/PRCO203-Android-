@@ -1,11 +1,11 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.bbahealth.TrackerFragment"
-    android:background="#efefef"                                >
+    android:background="#efefef"
+    >
 
 
     <TextView
@@ -39,7 +39,7 @@
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/tracker_border"
                 />
 
             <FrameLayout
@@ -59,7 +59,8 @@
                     <ImageView
                         android:id="@+id/imageViewFirstBox"
                         android:layout_centerHorizontal="true"
-                        android:background="@color/colorPrimary"
+                        android:background="@drawable/shadow_blue"
+                        android:elevation="7dp"
                         android:layout_width="350dp"
                         android:layout_height="100dp"
                         android:layout_marginTop="20dp"
@@ -77,6 +78,7 @@
                         android:layout_marginStart="16dp"
                         android:textColor="@color/colorPrimaryDark"
                         android:text="@string/results_meeting"
+                        android:elevation="8dp"
                         />
 
                     <TextView
@@ -89,6 +91,7 @@
                         android:layout_marginTop="17dp"
                         android:text="@string/mri_scan"
                         android:textColor="@color/colorPrimaryDark"
+                        android:elevation="8dp"
                         />
 
                     <CheckBox
@@ -102,6 +105,7 @@
                         android:layout_marginEnd="39dp"
                         android:layout_marginRight="39dp"
                         android:checked="false"
+                        android:elevation="8dp"
                         />
 
                     <CheckBox
@@ -115,16 +119,18 @@
                         android:layout_marginEnd="39dp"
                         android:layout_marginRight="39dp"
                         android:checked="false"
+                        android:elevation="8dp"
                         />
 
                     <ImageView
                         android:id="@+id/imageViewSecondBox"
                         android:layout_centerHorizontal="true"
-                        android:background="@color/colorPrimary"
+                        android:background="@drawable/shadow_blue"
                         android:layout_width="350dp"
                         android:layout_height="80dp"
                         android:layout_below="@id/imageViewFirstBox"
                         android:layout_marginTop="20dp"
+                        android:elevation="7dp"
                         />
 
                     <TextView
@@ -139,6 +145,7 @@
                         android:textSize="20sp"
                         android:textColor="@color/colorPrimaryDark"
                         android:text="@string/open_evening"
+                        android:elevation="8dp"
                         />
 
                     <TextView
@@ -150,17 +157,18 @@
                         android:layout_below="@+id/TextViewOpenEvening"
                         android:layout_marginTop="12dp"
                         android:text="@string/find_out_more_information"
+                        android:elevation="8dp"
                         />
 
-                    <android.support.design.widget.FloatingActionButton
-                        android:id="@+id/floatingActionButtonInfo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <ImageButton
+                        android:id="@+id/trackerInfoOpenButton"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@android:drawable/ic_menu_info_details"
+                        android:elevation="8dp"
                         android:layout_alignBottom="@+id/textView2"
                         android:layout_alignLeft="@+id/checkBox2"
                         android:layout_alignStart="@+id/checkBox2"
-                        android:clickable="true"
-                        android:src="@android:drawable/ic_menu_info_details"
                         />
 
                 </RelativeLayout>

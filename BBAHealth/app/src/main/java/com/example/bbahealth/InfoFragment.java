@@ -13,6 +13,7 @@ import android.widget.Toast;
 public class InfoFragment extends Fragment {
 
     View view;
+    public int openTab = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -30,6 +31,7 @@ public class InfoFragment extends Fragment {
                 if (MainActivity.infoViewOpen) {
                     Intent intent = new Intent(getActivity(), InfoOpenActivity.class);
                     startActivity(intent);
+                    openTab = i;
                     //Toast.makeText(getActivity().getApplicationContext(), "Card: " + i, Toast.LENGTH_SHORT).show();
                 }
             }
