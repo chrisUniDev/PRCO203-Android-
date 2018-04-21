@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity"
+    android:background="#d4d4d4"
+    >
+
+    <TextView
+        android:id="@+id/NameOverView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:text="Name"
+        android:textSize="17sp"
+        android:paddingTop="7dp"
+        android:paddingLeft="15dp"
+        />
+
+    <EditText
+        android:id="@+id/NameFilled"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/NameOverView"
+        android:hint="Name"
+        android:textColor="#000000"
+        android:background="#ffffff"
+        android:paddingLeft="15dp"
+        />
+
+    <TextView
+        android:id="@+id/NotificationOverView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/NameFilled"
+        android:text="Notifications"
+        android:textSize="17sp"
+        android:paddingTop="7dp"
+        android:paddingLeft="15dp"
+        />
+
+    <TextView
+        android:id="@+id/NotificationFill"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/NotificationOverView"
+        android:background="#ffffff"
+        android:text="Push Notifications"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:paddingTop="7dp"
+        android:paddingLeft="15dp"
+        />
+
+    <Switch
+        android:id="@+id/NotificationSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/NotificationOverView"
+        android:layout_toRightOf="@+id/NotificationFill"
+        android:background="#ffffff"
+        android:paddingRight="15dp"
+        />
+
+    <TextView
+        android:id="@+id/AboutOverview"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/NotificationSwitch"
+        android:text="About"
+        android:textSize="17sp"
+        android:paddingTop="7dp"
+        android:paddingLeft="15dp"
+        />
+
+    <TextView
+        android:id="@+id/VersionFill"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/AboutOverview"
+        android:background="@drawable/settings_spacing"
+        android:text="Version"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:paddingTop="7dp"
+        android:paddingLeft="15dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/AboutOverview"
+        android:text="1.0"
+        android:textSize="17sp"
+        android:textAlignment="viewEnd"
+        android:paddingRight="15dp"
+        android:paddingTop="7dp"
+        />
+
+    <TextView
+        android:id="@+id/BuildFill"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/VersionFill"
+        android:background="@drawable/settings_spacing"
+        android:text="Build"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:paddingTop="7dp"
+        android:paddingLeft="15dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/VersionFill"
+        android:text="18.4.21"
+        android:textSize="17sp"
+        android:paddingTop="7dp"
+        android:textAlignment="viewEnd"
+        android:paddingRight="15dp"
+        />
+
+    <TextView
+        android:id="@+id/BBAFill"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/BuildFill"
+        android:background="@drawable/settings_spacing"
+        android:text="BBA Health"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:paddingTop="7dp"
+        android:paddingLeft="15dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/BuildFill"
+        android:text="About"
+        android:textColor="#0055ff"
+        android:textSize="17sp"
+        android:paddingTop="7dp"
+        android:textAlignment="viewEnd"
+        android:paddingRight="15dp"
+        />
+
+    <TextView
+        android:id="@+id/DevFill"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/BBAFill"
+        android:background="@drawable/settings_spacing"
+        android:text="Developed by: Episteme, HMSB &amp; RWG"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:paddingTop="7dp"
+        android:textAlignment="center"
+        />
+
+</RelativeLayout>

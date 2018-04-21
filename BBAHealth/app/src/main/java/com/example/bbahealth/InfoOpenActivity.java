@@ -13,16 +13,5 @@ public class InfoOpenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_info_open);
 
         setTitle("Information Open");
-
-        ImageButton closeButton = (ImageButton) findViewById(R.id.imageButtonClose);
-
-        closeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-
-                //Toast.makeText(getApplicationContext(), "Closing", Toast.LENGTH_LONG).show();
-            }
-        });
     }
 }

@@ -5,13 +5,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class TrackerInfoOpen extends AppCompatActivity {
+public class SettingsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tracker_info_open);
+        setContentView(R.layout.activity_settings);
 
-        setTitle("Tracker Information Open");
+        setTitle("Settings");
     }
 }

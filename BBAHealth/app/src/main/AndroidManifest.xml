@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.bbahealth">
-
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bbahealth"
+    >
 
     <application
         android:allowBackup="true"
@@ -11,24 +10,79 @@
         android:label="BBA Health"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        >
+
         <activity
             android:name=".MainActivity"
-            android:label="Radiotherapy">
+            android:label="Radiotherapy"
+            >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action
+                    android:name="android.intent.action.MAIN"
+                    />
+                <category
+                    android:name="android.intent.category.LAUNCHER"
+                    />
             </intent-filter>
         </activity>
-        <activity android:name=".InfoOpenActivity" />
+
         <activity
             android:name=".InitialActivity"
             android:label="@string/title_activity_initial"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ZoomTwoActivity" />
-        <activity android:name=".ZoomOneActivity" />
-        <activity android:name=".TrackerInfoOpen"></activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.bbahealth.MainActivity"
+                />
+        </activity>
+
+        <activity
+            android:name=".InfoOpenActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.bbahealth.MainActivity"
+                />
+            </activity>
+
+        <activity
+            android:name=".ZoomTwoActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.bbahealth.MainActivity"
+                />
+        </activity>
+
+        <activity
+            android:name=".ZoomOneActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.bbahealth.MainActivity"
+                />
+        </activity>
+
+        <activity
+            android:name=".TrackerInfoOpen"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.bbahealth.MainActivity"
+                />
+        </activity>
+
+        <activity
+            android:name=".SettingsActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.bbahealth.MainActivity"
+                />
+        </activity>
+
     </application>
 
 </manifest>

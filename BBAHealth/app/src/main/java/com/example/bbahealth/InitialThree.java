@@ -84,8 +84,7 @@ public class InitialThree extends Fragment {
             public void onClick(View view) {
                 getActivity().finish();
 
-                MainActivity mainActivity = new MainActivity();
-                mainActivity.firstTime = true;
+                MainActivity.firstTime = true;
 
                 //Toast.makeText(getActivity().getApplicationContext(), "Initialization Closed" ,Toast.LENGTH_LONG).show();
             }

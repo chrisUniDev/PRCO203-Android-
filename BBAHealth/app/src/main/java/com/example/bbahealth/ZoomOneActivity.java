@@ -10,7 +10,6 @@ import android.widget.ImageView;
 
 public class ZoomOneActivity extends AppCompatActivity {
 
-    ImageButton closeButton;
     ImageView imageView;
     private ScaleGestureDetector scaleGestureDetector;
 
@@ -21,18 +20,7 @@ public class ZoomOneActivity extends AppCompatActivity {
 
         setTitle("Hospital Map");
 
-        closeButton = (ImageButton) findViewById(R.id.imageButtonCloseZoomOne);
         imageView = (ImageView) findViewById(R.id.imageTestOne);
-
-        closeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-
-                //Toast.makeText(getApplicationContext(), "Closing", Toast.LENGTH_LONG).show();
-            }
-        });
-
 
         scaleGestureDetector = new ScaleGestureDetector(this, new MySimpleOnScaleGestureListener(imageView));
     }
