@@ -185,7 +185,7 @@
                     <ImageView
                         android:id="@+id/ImageViewSecondStage"
                         android:layout_centerHorizontal="true"
-                        android:background="@color/colorPrimary"
+                        android:background="@drawable/shadow_blue"
                         android:layout_width="350dp"
                         android:layout_height="400dp"
                         android:layout_marginTop="20dp" />
@@ -239,7 +239,7 @@
                     <ImageView
                         android:id="@+id/ImageViewThirdStageTreatmentOne"
                         android:layout_centerHorizontal="true"
-                        android:background="@color/colorPrimary"
+                        android:background="@drawable/shadow_blue"
                         android:layout_width="350dp"
                         android:layout_height="25dp"
                         android:layout_marginTop="20dp" />
@@ -261,7 +261,7 @@
                     <ImageView
                         android:id="@+id/ImageViewThirdStageTreatmentTwo"
                         android:layout_centerHorizontal="true"
-                        android:background="@color/colorPrimary"
+                        android:background="@drawable/shadow_blue"
                         android:layout_width="350dp"
                         android:layout_height="150dp"
                         android:layout_below="@+id/ImageViewThirdStageTreatmentOne"
@@ -305,7 +305,7 @@
                     <ImageView
                         android:id="@+id/ImageViewFourthStage"
                         android:layout_centerHorizontal="true"
-                        android:background="@color/colorPrimary"
+                        android:background="@drawable/shadow_blue"
                         android:layout_width="350dp"
                         android:layout_height="220dp"
                         android:layout_marginTop="20dp" />
@@ -331,7 +331,7 @@
                     <ImageView
                         android:id="@+id/ImageViewFifthStage"
                         android:layout_centerHorizontal="true"
-                        android:background="@color/colorPrimary"
+                        android:background="@drawable/shadow_blue"
                         android:layout_width="350dp"
                         android:layout_height="220dp"
                         android:layout_marginTop="20dp" />
@@ -357,7 +357,7 @@
                     <ImageView
                         android:id="@+id/ImageViewSixthStage"
                         android:layout_centerHorizontal="true"
-                        android:background="@color/colorPrimary"
+                        android:background="@drawable/shadow_blue"
                         android:layout_width="350dp"
                         android:layout_height="220dp"
                         android:layout_marginTop="20dp" />
@@ -383,7 +383,7 @@
                     <ImageView
                         android:id="@+id/ImageViewSeventhStage"
                         android:layout_centerHorizontal="true"
-                        android:background="@color/colorPrimary"
+                        android:background="@drawable/shadow_blue"
                         android:layout_width="350dp"
                         android:layout_height="220dp"
                         android:layout_marginTop="20dp" />
@@ -409,7 +409,7 @@
                     <ImageView
                         android:id="@+id/ImageViewEighthStage"
                         android:layout_centerHorizontal="true"
-                        android:background="@color/colorPrimary"
+                        android:background="@drawable/shadow_blue"
                         android:layout_width="350dp"
                         android:layout_height="220dp"
                         android:layout_marginTop="20dp" />
