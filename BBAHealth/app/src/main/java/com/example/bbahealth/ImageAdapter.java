@@ -35,9 +35,9 @@ public class ImageAdapter extends BaseAdapter{
         if (convertView == null) {
             // if it's not recycled, initialize some attributes
             imageView = new ImageView(context);
-            imageView.setLayoutParams(new ViewGroup.LayoutParams(800, 1000));
-            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-            imageView.setPadding(0, 10, 0, 5);;
+            imageView.setLayoutParams(new ViewGroup.LayoutParams(720, 875));
+            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+            imageView.setPadding(20, 10, 20, 5);
         } else {
             imageView = (ImageView) convertView;
         }
@@ -47,11 +47,9 @@ public class ImageAdapter extends BaseAdapter{
     }
 
     private Integer[] ThumbIds = {
-            R.drawable.ic_card_image_one,
-            R.drawable.ic_card_image_two,
-            R.drawable.ic_card_image_three,
-            R.drawable.ic_card_image_one,
-            R.drawable.ic_card_image_two,
-            R.drawable.ic_card_image_three
+            R.drawable.ic_card_image_four,
+            R.drawable.ic_card_image_seven,
+            R.drawable.ic_card_image_six,
+            R.drawable.ic_card_image_five
     };
 }

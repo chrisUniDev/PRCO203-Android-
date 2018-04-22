@@ -22,8 +22,8 @@
             <ImageView
                 android:id="@+id/imageOpen"
                 android:layout_width="match_parent"
-                android:layout_height="437dp"
-                android:src="@drawable/ic_card_image_one"
+                android:layout_height="365dp"
+                android:src="@drawable/ic_card_image_eight"
                 android:layout_alignParentTop="true"
                 android:scaleType="fitStart"
                 />

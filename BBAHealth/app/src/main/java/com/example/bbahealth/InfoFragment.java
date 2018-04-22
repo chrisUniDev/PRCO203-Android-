@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class InfoFragment extends Fragment {
 
     View view;
-    public int openTab = 0;
+    public static int openTab = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,5 +38,9 @@ public class InfoFragment extends Fragment {
         });
 
         return view;
+    }
+
+    public static int getOpenTab(){
+        return openTab;
     }
 }
