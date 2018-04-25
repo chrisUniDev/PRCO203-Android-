@@ -58,7 +58,6 @@ public class SupportFragment extends Fragment {
                 emailIntent.setData(Uri.parse("mailto:"));
                 emailIntent.setType("text/plain");
 
-
                 emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
                 emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Your subject");
                 emailIntent.putExtra(Intent.EXTRA_TEXT, "Email message goes here");

@@ -31,7 +31,7 @@ public class InitialTwo extends Fragment {
         ListView listView = (ListView) view.findViewById(R.id.listViewPathwayOptions);
 
         // figuring out what to draw on screen
-        ArrayAdapter<String> listViewAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, pathwayOptions );
+        ArrayAdapter<String> listViewAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, pathwayOptions);
 
         listView.setAdapter(listViewAdapter);
 
