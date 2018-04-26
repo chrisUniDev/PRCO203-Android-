@@ -1,7 +1,5 @@
 package com.example.bbahealth;
 
-
-import android.app.ListActivity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,10 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class InitialTwo extends Fragment {
+
+    boolean oneTicked = false;
+    boolean twoTicked = false;
 
     public InitialTwo() {
         // Required empty public constructor
@@ -30,6 +31,9 @@ public class InitialTwo extends Fragment {
         };
         ListView listView = (ListView) view.findViewById(R.id.listViewPathwayOptions);
 
+        final ImageView tickOne = view.findViewById(R.id.imageViewTickOne);
+        final ImageView tickTwo = view.findViewById(R.id.imageViewTickTwo);
+
         // figuring out what to draw on screen
         ArrayAdapter<String> listViewAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, pathwayOptions);
 
@@ -40,9 +44,23 @@ public class InitialTwo extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:
-                        Toast.makeText(getActivity(), "You have chosen Palliative pathway", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(getActivity(), "You have chosen Palliative pathway", Toast.LENGTH_SHORT).show();
+                        if(!oneTicked){
+                            tickOne.setBackgroundResource(R.drawable.ic_check_black_24dp);
+                            oneTicked = true;
+                        }else{
+                            tickOne.setBackgroundResource(R.drawable.ic_check_box_outline_blank_black_24dp);
+                            oneTicked = false;
+                        }
                     case 1:
-                        Toast.makeText(getActivity(), "You have chosen Radical pathway", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(getActivity(), "You have chosen Radical pathway", Toast.LENGTH_SHORT).show();
+                        if(!twoTicked){
+                            tickTwo.setBackgroundResource(R.drawable.ic_check_black_24dp);
+                            twoTicked = true;
+                        }else {
+                            tickTwo.setBackgroundResource(R.drawable.ic_check_box_outline_blank_black_24dp);
+                            twoTicked = false;
+                        }
                 }
             }
         });
