@@ -42,25 +42,22 @@ public class InitialTwo extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
-                    case 0:
-//                        Toast.makeText(getActivity(), "You have chosen Palliative pathway", Toast.LENGTH_SHORT).show();
-                        if(!oneTicked){
-                            tickOne.setBackgroundResource(R.drawable.ic_check_black_24dp);
-                            oneTicked = true;
-                        }else{
-                            tickOne.setBackgroundResource(R.drawable.ic_check_box_outline_blank_black_24dp);
-                            oneTicked = false;
-                        }
-                    case 1:
-//                        Toast.makeText(getActivity(), "You have chosen Radical pathway", Toast.LENGTH_SHORT).show();
-                        if(!twoTicked){
-                            tickTwo.setBackgroundResource(R.drawable.ic_check_black_24dp);
-                            twoTicked = true;
-                        }else {
-                            tickTwo.setBackgroundResource(R.drawable.ic_check_box_outline_blank_black_24dp);
-                            twoTicked = false;
-                        }
+                if(position == 0){
+                    if(!oneTicked){
+                        tickOne.setBackgroundResource(R.drawable.ic_check_black_24dp);
+                        oneTicked = true;
+                    }else{
+                        tickOne.setBackgroundResource(R.drawable.ic_check_box_outline_blank_black_24dp);
+                        oneTicked = false;
+                    }
+                }else if(position == 1){
+                    if(!twoTicked){
+                        tickTwo.setBackgroundResource(R.drawable.ic_check_black_24dp);
+                        twoTicked = true;
+                    }else {
+                        tickTwo.setBackgroundResource(R.drawable.ic_check_box_outline_blank_black_24dp);
+                        twoTicked = false;
+                    }
                 }
             }
         });

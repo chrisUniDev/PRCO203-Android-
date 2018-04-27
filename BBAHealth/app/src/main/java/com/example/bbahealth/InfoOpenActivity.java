@@ -17,16 +17,16 @@ public class InfoOpenActivity extends AppCompatActivity {
 
         if(i == 0){
             setTitle("Treatment Plan Information");
-            openImage.setImageResource(R.drawable.ic_card_image_four);
+            openImage.setImageResource(R.drawable.ic_card_image_ten);
         } else if(i == 1){
             setTitle("Side Effects of Radiotherapy");
             openImage.setImageResource(R.drawable.ic_card_image_eight);
         } else if(i == 2){
             setTitle("How Radiotherapy Works");
-            openImage.setImageResource(R.drawable.ic_card_image_six);
+            openImage.setImageResource(R.drawable.ic_card_image_eleven);
         } else if(i == 3){
             setTitle("Finances");
-            openImage.setImageResource(R.drawable.ic_card_image_five);
+            openImage.setImageResource(R.drawable.ic_card_image_nine);
         }
     }
 }
