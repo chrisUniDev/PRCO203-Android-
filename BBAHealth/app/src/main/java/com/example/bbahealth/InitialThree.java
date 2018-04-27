@@ -9,12 +9,22 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
 public class InitialThree extends Fragment {
 
     View view;
+
+    boolean oneTicked = false;
+    boolean twoTicked = false;
+    boolean threeTicked = false;
+    boolean fourTicked = false;
+    boolean fiveTicked = false;
+    boolean sixTicked = false;
+    boolean sevenTicked = false;
+    boolean eightTicked = false;
 
     public InitialThree() {
         // Required empty public constructor
@@ -40,7 +50,14 @@ public class InitialThree extends Fragment {
 
         ListView listView = (ListView) view.findViewById(R.id.listViewCancerSelection);
 
-
+        final ImageView tickOne = view.findViewById(R.id.imageViewSelectionOne);
+        final ImageView tickTwo = view.findViewById(R.id.imageViewSelectionTwo);
+        final ImageView tickThree = view.findViewById(R.id.imageViewSelectionThree);
+        final ImageView tickFour = view.findViewById(R.id.imageViewSelectionFour);
+        final ImageView tickFive = view.findViewById(R.id.imageViewSelectionFive);
+        final ImageView tickSix = view.findViewById(R.id.imageViewSelectionSix);
+        final ImageView tickSeven = view.findViewById(R.id.imageViewSelectionSeven);
+        final ImageView tickEight = view.findViewById(R.id.imageViewSelectionEight);
 
         // figuring out what to draw on screen
         ArrayAdapter<String> listViewAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, cancerOptions );
@@ -50,31 +67,77 @@ public class InitialThree extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position) {
-                    case 0:
-                        Toast.makeText(getActivity(), "You have chosen bladder cancer", Toast.LENGTH_SHORT).show();
-                        // call function and pass variable
-                    case 1:
-                        Toast.makeText(getActivity(), "You have chosen breast cancer", Toast.LENGTH_SHORT).show();
-                        // call function and pass variable
-                    case 2:
-                        Toast.makeText(getActivity(), "You have chosen gynae cancer", Toast.LENGTH_SHORT).show();
-                        // call function and pass variable
-                    case 3:
-                        Toast.makeText(getActivity(), "You have chosen head & neck cancer", Toast.LENGTH_SHORT).show();
-                        // call function and pass variable
-                    case 4:
-                        Toast.makeText(getActivity(), "You have chosen lower GI cancer", Toast.LENGTH_SHORT).show();
-                        // call function and pass variable
-                    case 5:
-                        Toast.makeText(getActivity(), "You have chosen prostate cancer", Toast.LENGTH_SHORT).show();
-                        // call function and pass variable
-                    case 6:
-                        Toast.makeText(getActivity(), "You have chosen skin cancer", Toast.LENGTH_SHORT).show();
-                        // call function and pass variable
-                    case 7:
-                        Toast.makeText(getActivity(), "You have chosen upper GI cancer", Toast.LENGTH_SHORT).show();
-                        // call function and pass variable
+                if (position == 0) {
+                    if (!oneTicked) {
+                        tickOne.setBackgroundResource(R.drawable.ic_check_black_24dp);
+                        oneTicked = true;
+                    } else {
+                        tickOne.setBackgroundResource(R.drawable.ic_check_box_outline_blank_black_24dp);
+                        oneTicked = false;
+                    }
+                }
+                if (position == 1) {
+                    if (!twoTicked) {
+                        tickTwo.setBackgroundResource(R.drawable.ic_check_black_24dp);
+                        twoTicked = true;
+                    } else {
+                        tickTwo.setBackgroundResource(R.drawable.ic_check_box_outline_blank_black_24dp);
+                        twoTicked = false;
+                    }
+                }
+                if (position == 2) {
+                    if (!threeTicked) {
+                        tickThree.setBackgroundResource(R.drawable.ic_check_black_24dp);
+                        threeTicked = true;
+                    } else {
+                        tickThree.setBackgroundResource(R.drawable.ic_check_box_outline_blank_black_24dp);
+                        threeTicked = false;
+                    }
+                }
+                if (position == 3) {
+                    if (!fourTicked) {
+                        tickFour.setBackgroundResource(R.drawable.ic_check_black_24dp);
+                        fourTicked = true;
+                    } else {
+                        tickFour.setBackgroundResource(R.drawable.ic_check_box_outline_blank_black_24dp);
+                        fourTicked = false;
+                    }
+                }
+                if (position == 4) {
+                        if (!fiveTicked) {
+                            tickFive.setBackgroundResource(R.drawable.ic_check_black_24dp);
+                            fiveTicked = true;
+                        } else {
+                            tickFive.setBackgroundResource(R.drawable.ic_check_box_outline_blank_black_24dp);
+                            fiveTicked = false;
+                        }
+                    }
+                if (position == 5) {
+                    if (!sixTicked) {
+                        tickSix.setBackgroundResource(R.drawable.ic_check_black_24dp);
+                        sixTicked = true;
+                    } else {
+                        tickSix.setBackgroundResource(R.drawable.ic_check_box_outline_blank_black_24dp);
+                        sixTicked = false;
+                    }
+                }
+                if (position == 6) {
+                    if (!sevenTicked) {
+                        tickSeven.setBackgroundResource(R.drawable.ic_check_black_24dp);
+                        sevenTicked = true;
+                    } else {
+                        tickSeven.setBackgroundResource(R.drawable.ic_check_box_outline_blank_black_24dp);
+                        sevenTicked = false;
+                    }
+                }
+                if (position == 7) {
+                    if (!eightTicked) {
+                        tickEight.setBackgroundResource(R.drawable.ic_check_black_24dp);
+                        eightTicked = true;
+                    } else {
+                        tickEight.setBackgroundResource(R.drawable.ic_check_box_outline_blank_black_24dp);
+                        eightTicked = false;
+                    }
                 }
             }
         });
@@ -93,5 +156,4 @@ public class InitialThree extends Fragment {
         // Inflate the layout for this fragment
         return view;
     }
-
 }
