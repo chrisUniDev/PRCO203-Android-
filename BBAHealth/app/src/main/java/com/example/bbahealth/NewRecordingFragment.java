@@ -1,16 +1,14 @@
 package com.example.bbahealth;
 
-import android.content.pm.PackageManager;
+import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import java.io.IOException;
 
@@ -19,8 +17,6 @@ public class NewRecordingFragment extends Fragment {
     View view;
     ImageButton imageRecordButton;
     boolean recording = false;
-    String audioFilePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/AudioRecordingTest.3gp";
-    private static MediaRecorder mediaRecorder;
 
     public NewRecordingFragment() {
         // Required empty public constructor
@@ -34,6 +30,12 @@ public class NewRecordingFragment extends Fragment {
 
         view = inflater.inflate(R.layout.fragment_new_recording, container, false);
 
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        // Setup any handles to view objects here
         // get the reference of Button
         imageRecordButton = (ImageButton) view.findViewById(R.id.imageViewRecordButton);
 
@@ -43,13 +45,13 @@ public class NewRecordingFragment extends Fragment {
                 if(!recording){
                     imageRecordButton.setBackgroundResource(R.drawable.ic_stop_recording_button);
                     //
-
+                    //
                     //
                     recording = true;
                 }else{
                     imageRecordButton.setBackgroundResource(R.drawable.ic_record_button);
                     //
-
+                    //
                     //
                     recording = false;
                 }
@@ -57,7 +59,5 @@ public class NewRecordingFragment extends Fragment {
                 //Toast.makeText(getActivity().getApplicationContext(), "Testing", Toast.LENGTH_LONG).show();
             }
         });
-
-        return view;
     }
 }
