@@ -1,26 +1,25 @@
 package com.example.bbahealth;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 public class OldRecordingFragment extends Fragment {
 
     View view;
 
-    String[] recordingList = {
-            "Recording One",
-            "Mask Explanation",
-            "Recording Three"
-    };
+    ArrayList<String> recordingList = new ArrayList<String>();
+    MediaPlayer mediaPlayer;
 
     public OldRecordingFragment() {
         // Required empty public constructor
@@ -32,15 +31,34 @@ public class OldRecordingFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_old_recording, container, false);
 
-//        Button playButton = view.findViewById(R.id.buttonPlay);
-//        Button stopButton = view.findViewById(R.id.buttonStop);
-        ListView listView = view.findViewById(R.id.listViewPreviousRecordings);
+        final ListView listView = view.findViewById(R.id.listViewPreviousRecordings);
 
         ArrayAdapter<String> listViewAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, recordingList);
 
         listView.setAdapter(listViewAdapter);
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+                String fileName = "/Android/data/com.example.bbahealth/files/audio_recording_" + position + ".mp4";
+
+                mediaPlayer = new MediaPlayer();
+                try {
+                    mediaPlayer.setDataSource(fileName);
+                    mediaPlayer.prepare();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                mediaPlayer.start();
+                Toast.makeText(getActivity(), "Recording Playing" + position,Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+//
+//        mediaPlayer.start();
 
 //        playButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
