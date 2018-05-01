@@ -22,10 +22,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/textViewTitle"
+        android:layout_above="@+id/buttonStopPlaying"
         android:dividerHeight="2dp"
         android:divider="@color/colorAccent"
         android:paddingRight="10dp"
         android:paddingLeft="10dp"
+        />
+
+    <Button
+        android:id="@+id/buttonStopPlaying"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:text="@string/stop_audio"
+        android:background="@drawable/shadow_blue"
+        android:elevation="15dp"
         />
 
 </RelativeLayout>

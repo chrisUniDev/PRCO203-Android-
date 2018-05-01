@@ -56,4 +56,5 @@
     <string name="wheelchairs_available">Wheelchairs Available</string>
     <string name="available_wheelchairs">Available 24 hours a day. 7 days a week. We have wheelchairs available at most of the main entrances for patients and visitors to use.</string>
     <string name="info">Info</string>
+    <string name="stop_audio">Stop Audio</string>
 </resources>

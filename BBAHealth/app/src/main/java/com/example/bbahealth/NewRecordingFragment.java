@@ -38,8 +38,6 @@ public class NewRecordingFragment extends Fragment {
     MediaRecorder mediaRecorder ;
     public static final int RequestPermissionCode = 1;
 
-    OldRecordingFragment oldRecordingFragment = new OldRecordingFragment();
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -78,7 +76,7 @@ public class NewRecordingFragment extends Fragment {
         // Setup any handles to view objects here
         // get the reference of Button
 
-        imageRecordButton = (ImageButton) view.findViewById(R.id.imageViewRecordButton);
+        imageRecordButton = view.findViewById(R.id.imageViewRecordButton);
 
         imageRecordButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,10 +86,6 @@ public class NewRecordingFragment extends Fragment {
                         imageRecordButton.setBackgroundResource(R.drawable.ic_stop_recording_button);
 
                         AudioSavePathInDevice = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Android/data/com.example.bbahealth/files/audio_recording_" + i + ".mp4";
-
-                        oldRecordingFragment.recordingList.add("audio_recording_" + i);
-
-                        i++;
 
                         MediaRecorderReady();
 
@@ -114,6 +108,7 @@ public class NewRecordingFragment extends Fragment {
                     imageRecordButton.setBackgroundResource(R.drawable.ic_record_button);
 
                     mediaRecorder.stop();
+                    i++;
 
                     recording = false;
                 }
