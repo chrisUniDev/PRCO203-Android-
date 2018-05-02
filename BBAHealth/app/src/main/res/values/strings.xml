@@ -7,6 +7,8 @@
     <string name="title_support">Support</string>
     <string name="content_description">View In Detail</string>
 
+    <string name="YouTubeAPIKey">AIzaSyCwxMOpK0XVKpNZox1aL578ZDbVWMLIsx0</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="information_fragment">Information Fragment</string>
     <string name="maps_fragment">Maps Fragment</string>

@@ -8,6 +8,7 @@ import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,6 +38,8 @@ public class NewRecordingFragment extends Fragment {
     String AudioSavePathInDevice = null;
     MediaRecorder mediaRecorder ;
     public static final int RequestPermissionCode = 1;
+
+    OldRecordingFragment oldRecordingFragment = new OldRecordingFragment();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -108,6 +111,7 @@ public class NewRecordingFragment extends Fragment {
                     imageRecordButton.setBackgroundResource(R.drawable.ic_record_button);
 
                     mediaRecorder.stop();
+
                     i++;
 
                     recording = false;
