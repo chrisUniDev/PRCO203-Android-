@@ -44,6 +44,7 @@ public class InfoOpenActivity extends YouTubeBaseActivity {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
                 youTubePlayer.loadVideo("zoEYjt1dSsM");
+                youTubePlayer.pause();
             }
 
             @Override
