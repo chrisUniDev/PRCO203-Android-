@@ -1,6 +1,8 @@
 package com.example.bbahealth;
 
+import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.app.Fragment;
@@ -11,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -22,7 +25,7 @@ public class OldRecordingFragment extends Fragment {
     View view;
 
     ArrayList<String> recordingList = new ArrayList<String>();
-    MediaPlayer mediaPlayer = new MediaPlayer();
+    MediaPlayer mediaPlayer;
 
     Button stopButton;
 
@@ -49,27 +52,29 @@ public class OldRecordingFragment extends Fragment {
         recordingList.add("Recording One");
         recordingList.add("Recording Two");
         recordingList.add("Recording Three");
+        recordingList.add("Recording Four");
+        recordingList.add("Recording Five");
+        recordingList.add("Recording Six");
+        recordingList.add("Recording Seven");
+        recordingList.add("Recording Eight");
+        recordingList.add("Recording Nine");
+        recordingList.add("Recording Ten");
+        recordingList.add("Recording Eleven");
+        recordingList.add("Recording Twelve");
+        recordingList.add("Recording Thirteen");
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                String fileName = "/Android/data/com.example.bbahealth/files/audio_recording_" + position + ".mp4";
-
-                File path = Environment.getExternalStorageDirectory();
-
-//                if(!playing){
-                    try {
-                        mediaPlayer.setDataSource(path + fileName);
-                        mediaPlayer.prepare();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                if(!playing){
+                    mediaPlayer = MediaPlayer.create(getContext(), R.raw.coffee_bear_ben);
                     mediaPlayer.start();
                     Toast.makeText(getActivity(), "Playing Recording: " + (position + 1),Toast.LENGTH_LONG).show();
-//                    playing = true;
-//                }
+                    playing = true;
+                }
 
+//                String fileName = "/Android/data/com.example.bbahealth/files/audio_recording_" + position + ".mp4";
             }
         });
 
@@ -79,7 +84,7 @@ public class OldRecordingFragment extends Fragment {
                 if(mediaPlayer != null){
                     mediaPlayer.stop();
                     mediaPlayer.release();
-//                    playing = false;
+                    playing = false;
                     Toast.makeText(getActivity(), "Playback Stopped",Toast.LENGTH_LONG).show();
                 }
             }

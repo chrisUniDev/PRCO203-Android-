@@ -1,19 +1,12 @@
 package com.example.bbahealth;
 
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-import com.google.android.youtube.player.YouTubeBaseActivity;
-import com.google.android.youtube.player.YouTubeInitializationResult;
-import com.google.android.youtube.player.YouTubePlayer;
-import com.google.android.youtube.player.YouTubePlayerView;
-
-public class InfoOpenActivity extends YouTubeBaseActivity {
+public class InfoOpenActivity extends AppCompatActivity {
 
     int i = InfoFragment.getOpenTab();
-
-    YouTubePlayerView youTubePlayerView;
-    YouTubePlayer.OnInitializedListener onInitializedListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,21 +28,5 @@ public class InfoOpenActivity extends YouTubeBaseActivity {
             setTitle("Finances");
             openImage.setImageResource(R.drawable.ic_card_image_nine);
         }
-
-        youTubePlayerView = findViewById(R.id.youtubePlayer);
-
-        youTubePlayerView.initialize(YouTubeAPIFetch.getApiKey(), onInitializedListener);
-
-        onInitializedListener = new YouTubePlayer.OnInitializedListener() {
-            @Override
-            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
-                youTubePlayer.loadVideo("zoEYjt1dSsM");
-            }
-
-            @Override
-            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
-
-            }
-        };
     }
 }
