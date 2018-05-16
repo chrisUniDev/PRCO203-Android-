@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BBAHealth.iml" filepath="$PROJECT_DIR$/BBAHealth.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../node_modules/react-native-siri-wave-view/android/react-native-siri-wave-view.iml" filepath="$PROJECT_DIR$/../node_modules/react-native-siri-wave-view/android/react-native-siri-wave-view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../node_modules/react-native-siri-wave-view/android/SIRIWaveView/siriwaveview/siriwaveview.iml" filepath="$PROJECT_DIR$/../node_modules/react-native-siri-wave-view/android/SIRIWaveView/siriwaveview/siriwaveview.iml" />
     </modules>
   </component>
 </project>
